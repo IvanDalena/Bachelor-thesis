@@ -1,8 +1,16 @@
-# Python
+
 __pycache__/
 *.pyc
+.ipynb_checkpoints/
 
-# LaTeX
+
+.vscode/
+
+.DS_Store
+
+
+Latex/build/
+
 *.aux
 *.log
 *.out
@@ -10,9 +18,7 @@ __pycache__/
 *.synctex.gz
 *.fdb_latexmk
 *.fls
-
-# VSCode
-.vscode/
-
-# macOS
-.DS_Store
+*.bbl
+*.bcf
+*.blg
+*.run.xml
