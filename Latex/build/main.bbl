@@ -1,0 +1,847 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{cirelli2025darkmatter}{misc}{}{}
+      \name{author}{3}{}{%
+        {{hash=2e061928bdeeb85a91287613d03b7698}{%
+           family={Cirelli},
+           familyi={C\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+        {{hash=b217c027775fbf2541a4c4dcf0a78f8e}{%
+           family={Strumia},
+           familyi={S\bibinitperiod},
+           given={Alessandro},
+           giveni={A\bibinitperiod}}}%
+        {{hash=c32e6f43940a3d1c33324fb0d3c28dd7}{%
+           family={Zupan},
+           familyi={Z\bibinitperiod},
+           given={Jure},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{b01c8d5d49efcfd29484eb1fb7c447ee}
+      \strng{fullhash}{d02d380695f6398976b490f5ac634ac5}
+      \strng{fullhashraw}{d02d380695f6398976b490f5ac634ac5}
+      \strng{bibnamehash}{b01c8d5d49efcfd29484eb1fb7c447ee}
+      \strng{authorbibnamehash}{b01c8d5d49efcfd29484eb1fb7c447ee}
+      \strng{authornamehash}{b01c8d5d49efcfd29484eb1fb7c447ee}
+      \strng{authorfullhash}{d02d380695f6398976b490f5ac634ac5}
+      \strng{authorfullhashraw}{d02d380695f6398976b490f5ac634ac5}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-ph}
+      \field{eprinttype}{arXiv}
+      \field{title}{Dark Matter}
+      \field{year}{2025}
+      \verb{eprint}
+      \verb 2406.01705
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2406.01705
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2406.01705
+      \endverb
+    \endentry
+    \entry{profumo}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=c9cfe45022d8585f0f85ae2be067f23f}{%
+           family={Profumo},
+           familyi={P\bibinitperiod},
+           given={Stefano},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{c9cfe45022d8585f0f85ae2be067f23f}
+      \strng{fullhash}{c9cfe45022d8585f0f85ae2be067f23f}
+      \strng{fullhashraw}{c9cfe45022d8585f0f85ae2be067f23f}
+      \strng{bibnamehash}{c9cfe45022d8585f0f85ae2be067f23f}
+      \strng{authorbibnamehash}{c9cfe45022d8585f0f85ae2be067f23f}
+      \strng{authornamehash}{c9cfe45022d8585f0f85ae2be067f23f}
+      \strng{authorfullhash}{c9cfe45022d8585f0f85ae2be067f23f}
+      \strng{authorfullhashraw}{c9cfe45022d8585f0f85ae2be067f23f}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-ph}
+      \field{eprinttype}{arXiv}
+      \field{title}{TASI 2012 Lectures on Astrophysical Probes of Dark Matter}
+      \field{year}{2013}
+      \verb{eprint}
+      \verb 1301.0952
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1301.0952
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1301.0952
+      \endverb
+    \endentry
+    \entry{Arcadi_2025}{article}{}{}
+      \name{author}{10}{}{%
+        {{hash=79e894883a48b55bc294cae007d4dcac}{%
+           family={Arcadi},
+           familyi={A\bibinitperiod},
+           given={Giorgio},
+           giveni={G\bibinitperiod}}}%
+        {{hash=715e527671a75747c6b3aa01a00fd84b}{%
+           family={Cabo-Almeida},
+           familyi={C\bibinithyphendelim A\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=f00ca585f29af949bfca34f2ab7a90a8}{%
+           family={Dutra},
+           familyi={D\bibinitperiod},
+           given={Maíra},
+           giveni={M\bibinitperiod}}}%
+        {{hash=9707df3e07d0517c66af8bf0a8612bea}{%
+           family={Ghosh},
+           familyi={G\bibinitperiod},
+           given={Pradipta},
+           giveni={P\bibinitperiod}}}%
+        {{hash=f28f19cb97049dceb323de152a7cc117}{%
+           family={Lindner},
+           familyi={L\bibinitperiod},
+           given={Manfred},
+           giveni={M\bibinitperiod}}}%
+        {{hash=b53d3972e4ee23a8342bae768241850a}{%
+           family={Mambrini},
+           familyi={M\bibinitperiod},
+           given={Yann},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=ba402a1529fe78f52f0faea2101383bb}{%
+           family={Neto},
+           familyi={N\bibinitperiod},
+           given={Jacinto\bibnamedelima P.},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=54f086b2884f32b30d9df0892c500d6d}{%
+           family={Pierre},
+           familyi={P\bibinitperiod},
+           given={Mathias},
+           giveni={M\bibinitperiod}}}%
+        {{hash=c9cfe45022d8585f0f85ae2be067f23f}{%
+           family={Profumo},
+           familyi={P\bibinitperiod},
+           given={Stefano},
+           giveni={S\bibinitperiod}}}%
+        {{hash=3c0d9cb0def26ede05f3ea3959984fc5}{%
+           family={Queiroz},
+           familyi={Q\bibinitperiod},
+           given={Farinaldo\bibnamedelima S.},
+           giveni={F\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Springer Science}%
+        {Business Media LLC}%
+      }
+      \strng{namehash}{12ec4d6af06f3b62c50a6e9d450d45bb}
+      \strng{fullhash}{90da64300b21e1c8f7466976979b2805}
+      \strng{fullhashraw}{90da64300b21e1c8f7466976979b2805}
+      \strng{bibnamehash}{12ec4d6af06f3b62c50a6e9d450d45bb}
+      \strng{authorbibnamehash}{12ec4d6af06f3b62c50a6e9d450d45bb}
+      \strng{authornamehash}{12ec4d6af06f3b62c50a6e9d450d45bb}
+      \strng{authorfullhash}{90da64300b21e1c8f7466976979b2805}
+      \strng{authorfullhashraw}{90da64300b21e1c8f7466976979b2805}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1434-6052}
+      \field{journaltitle}{The European Physical Journal C}
+      \field{month}{2}
+      \field{number}{2}
+      \field{title}{The waning of the WIMP: endgame?}
+      \field{volume}{85}
+      \field{year}{2025}
+      \verb{doi}
+      \verb 10.1140/epjc/s10052-024-13672-y
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1140/epjc/s10052-024-13672-y
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1140/epjc/s10052-024-13672-y
+      \endverb
+    \endentry
+    \entry{Ford}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=66a3ae44bacb88ee2a215eed896ea505}{%
+           family={Rubin},
+           familyi={R\bibinitperiod},
+           given={Vera\bibnamedelima C.},
+           giveni={V\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=56427d3b43e26e634df4b18c99f3540e}{%
+           family={Ford},
+           familyi={F\bibinitperiod},
+           given={W.\bibnamedelimi Kent},
+           giveni={W\bibinitperiod\bibinitdelim K\bibinitperiod},
+           suffix={Jr.},
+           suffixi={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{ed3061bdd038e022f092705e0c29535e}
+      \strng{fullhash}{ed3061bdd038e022f092705e0c29535e}
+      \strng{fullhashraw}{ed3061bdd038e022f092705e0c29535e}
+      \strng{bibnamehash}{ed3061bdd038e022f092705e0c29535e}
+      \strng{authorbibnamehash}{ed3061bdd038e022f092705e0c29535e}
+      \strng{authornamehash}{ed3061bdd038e022f092705e0c29535e}
+      \strng{authorfullhash}{ed3061bdd038e022f092705e0c29535e}
+      \strng{authorfullhashraw}{ed3061bdd038e022f092705e0c29535e}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Astrophysical Journal}
+      \field{title}{Rotation of the Andromeda Nebula from a Spectroscopic Survey of Emission Regions}
+      \field{volume}{159}
+      \field{year}{1970}
+      \field{pages}{379}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1086/150317
+      \endverb
+    \endentry
+    \entry{Lisanti:ICTP:2018:DM}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=f509d47fd1d1a4925a2e0638e2805e8e}{%
+           family={Lisanti},
+           familyi={L\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {ICTP Trieste}%
+      }
+      \strng{namehash}{f509d47fd1d1a4925a2e0638e2805e8e}
+      \strng{fullhash}{f509d47fd1d1a4925a2e0638e2805e8e}
+      \strng{fullhashraw}{f509d47fd1d1a4925a2e0638e2805e8e}
+      \strng{bibnamehash}{f509d47fd1d1a4925a2e0638e2805e8e}
+      \strng{authorbibnamehash}{f509d47fd1d1a4925a2e0638e2805e8e}
+      \strng{authornamehash}{f509d47fd1d1a4925a2e0638e2805e8e}
+      \strng{authorfullhash}{f509d47fd1d1a4925a2e0638e2805e8e}
+      \strng{authorfullhashraw}{f509d47fd1d1a4925a2e0638e2805e8e}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{YouTube video, lecture at ICTP Trieste}
+      \field{title}{The Physics of Dark Matter}
+      \field{urlday}{8}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.youtube.com/watch?v=J5vcAZoxhAcM
+      \endverb
+      \verb{url}
+      \verb https://www.youtube.com/watch?v=J5vcAZoxhAcM
+      \endverb
+    \endentry
+    \entry{Zwicky}{misc}{}{}
+      \name{author}{2}{}{%
+        {{hash=0332954d5046f6ee3df9894739d879a2}{%
+           family={Andernach},
+           familyi={A\bibinitperiod},
+           given={Heinz},
+           giveni={H\bibinitperiod}}}%
+        {{hash=fd3370265eb574a6531e4a6cffeb8031}{%
+           family={Zwicky},
+           familyi={Z\bibinitperiod},
+           given={Fritz},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{0f916c83f09873b0274748fac232ba66}
+      \strng{fullhash}{0f916c83f09873b0274748fac232ba66}
+      \strng{fullhashraw}{0f916c83f09873b0274748fac232ba66}
+      \strng{bibnamehash}{0f916c83f09873b0274748fac232ba66}
+      \strng{authorbibnamehash}{0f916c83f09873b0274748fac232ba66}
+      \strng{authornamehash}{0f916c83f09873b0274748fac232ba66}
+      \strng{authorfullhash}{0f916c83f09873b0274748fac232ba66}
+      \strng{authorfullhashraw}{0f916c83f09873b0274748fac232ba66}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{astro-ph.IM}
+      \field{eprinttype}{arXiv}
+      \field{title}{English and Spanish Translation of Zwicky's (1933) The Redshift of Extragalactic Nebulae}
+      \field{year}{2017}
+      \verb{eprint}
+      \verb 1711.01693
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1711.01693
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1711.01693
+      \endverb
+    \endentry
+    \entry{History}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=45173e651a575c22d3d5aeb1decbed73}{%
+           family={Bertone},
+           familyi={B\bibinitperiod},
+           given={Gianfranco},
+           giveni={G\bibinitperiod}}}%
+        {{hash=32d7396024041de7456d6ae92ee17fad}{%
+           family={Hooper},
+           familyi={H\bibinitperiod},
+           given={Dan},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{6a70ae36dbc50992d40c1322c440db1f}
+      \strng{fullhash}{6a70ae36dbc50992d40c1322c440db1f}
+      \strng{fullhashraw}{6a70ae36dbc50992d40c1322c440db1f}
+      \strng{bibnamehash}{6a70ae36dbc50992d40c1322c440db1f}
+      \strng{authorbibnamehash}{6a70ae36dbc50992d40c1322c440db1f}
+      \strng{authornamehash}{6a70ae36dbc50992d40c1322c440db1f}
+      \strng{authorfullhash}{6a70ae36dbc50992d40c1322c440db1f}
+      \strng{authorfullhashraw}{6a70ae36dbc50992d40c1322c440db1f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{Rev. Mod. Phys.}
+      \field{title}{History of dark matter}
+      \field{volume}{90}
+      \field{year}{2018}
+      \field{pages}{045002}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/RevModPhys.90.045002
+      \endverb
+      \verb{eprint}
+      \verb 1605.04909
+      \endverb
+    \endentry
+    \entry{Clowe2006}{misc}{}{}
+      \name{author}{7}{}{%
+        {{hash=702a2dad984e6bd2124ee9a14ae51829}{%
+           family={Clowe},
+           familyi={C\bibinitperiod},
+           given={Douglas},
+           giveni={D\bibinitperiod}}}%
+        {{hash=ee0726024b173c7fb9cc58cd66dcb1dc}{%
+           family={Bradac},
+           familyi={B\bibinitperiod},
+           given={Marusa},
+           giveni={M\bibinitperiod}}}%
+        {{hash=70e2b88d243e92e9fd4b3afaa1843a6c}{%
+           family={Gonzalez},
+           familyi={G\bibinitperiod},
+           given={Anthony\bibnamedelima H.},
+           giveni={A\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=4a56d879d15200d127582a7a8bf59173}{%
+           family={Markevitch},
+           familyi={M\bibinitperiod},
+           given={Maxim},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e7303750e1c22901e59ce8d8629c7bfc}{%
+           family={Randall},
+           familyi={R\bibinitperiod},
+           given={Scott\bibnamedelima W.},
+           giveni={S\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=b80bfe785d021a721b74f224bb567f61}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={Christine},
+           giveni={C\bibinitperiod}}}%
+        {{hash=daea8f8a2041a0fce306dbc9ce0b758c}{%
+           family={Zaritsky},
+           familyi={Z\bibinitperiod},
+           given={Dennis},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{d07a43f1acb57351d12ad34ff261315d}
+      \strng{fullhash}{fcf1d4a0ae2da5231e01b5618ccd4648}
+      \strng{fullhashraw}{fcf1d4a0ae2da5231e01b5618ccd4648}
+      \strng{bibnamehash}{d07a43f1acb57351d12ad34ff261315d}
+      \strng{authorbibnamehash}{d07a43f1acb57351d12ad34ff261315d}
+      \strng{authornamehash}{d07a43f1acb57351d12ad34ff261315d}
+      \strng{authorfullhash}{fcf1d4a0ae2da5231e01b5618ccd4648}
+      \strng{authorfullhashraw}{fcf1d4a0ae2da5231e01b5618ccd4648}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Astrophysical Journal}
+      \field{title}{A Direct Empirical Proof of the Existence of Dark Matter}
+      \field{volume}{648}
+      \field{year}{2006}
+      \field{pages}{L109\bibrangedash L113}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1086/508162
+      \endverb
+    \endentry
+    \entry{Planck2018}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=2320788bb9535f078e3ac5da9b3233aa}{%
+           family={Collaboration},
+           familyi={C\bibinitperiod},
+           given={Planck},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{2320788bb9535f078e3ac5da9b3233aa}
+      \strng{fullhash}{2320788bb9535f078e3ac5da9b3233aa}
+      \strng{fullhashraw}{2320788bb9535f078e3ac5da9b3233aa}
+      \strng{bibnamehash}{2320788bb9535f078e3ac5da9b3233aa}
+      \strng{authorbibnamehash}{2320788bb9535f078e3ac5da9b3233aa}
+      \strng{authornamehash}{2320788bb9535f078e3ac5da9b3233aa}
+      \strng{authorfullhash}{2320788bb9535f078e3ac5da9b3233aa}
+      \strng{authorfullhashraw}{2320788bb9535f078e3ac5da9b3233aa}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{title}{Planck 2018 results. VI. Cosmological parameters}
+      \field{year}{2018}
+      \verb{doi}
+      \verb 10.48550/arXiv.1807.06209
+      \endverb
+      \verb{eprint}
+      \verb 1807.06209
+      \endverb
+    \endentry
+    \entry{Milgrom1983a}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=ee4ffbebc2ad325b3134c159dda48892}{%
+           family={Milgrom},
+           familyi={M\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{ee4ffbebc2ad325b3134c159dda48892}
+      \strng{fullhash}{ee4ffbebc2ad325b3134c159dda48892}
+      \strng{fullhashraw}{ee4ffbebc2ad325b3134c159dda48892}
+      \strng{bibnamehash}{ee4ffbebc2ad325b3134c159dda48892}
+      \strng{authorbibnamehash}{ee4ffbebc2ad325b3134c159dda48892}
+      \strng{authornamehash}{ee4ffbebc2ad325b3134c159dda48892}
+      \strng{authorfullhash}{ee4ffbebc2ad325b3134c159dda48892}
+      \strng{authorfullhashraw}{ee4ffbebc2ad325b3134c159dda48892}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Astrophysical Journal}
+      \field{title}{A modification of the Newtonian dynamics as a possible alternative to the hidden mass hypothesis}
+      \field{volume}{270}
+      \field{year}{1983}
+      \field{pages}{365\bibrangedash 370}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1086/161130
+      \endverb
+    \endentry
+    \entry{Milgrom1983b}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=ee4ffbebc2ad325b3134c159dda48892}{%
+           family={Milgrom},
+           familyi={M\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{ee4ffbebc2ad325b3134c159dda48892}
+      \strng{fullhash}{ee4ffbebc2ad325b3134c159dda48892}
+      \strng{fullhashraw}{ee4ffbebc2ad325b3134c159dda48892}
+      \strng{bibnamehash}{ee4ffbebc2ad325b3134c159dda48892}
+      \strng{authorbibnamehash}{ee4ffbebc2ad325b3134c159dda48892}
+      \strng{authornamehash}{ee4ffbebc2ad325b3134c159dda48892}
+      \strng{authorfullhash}{ee4ffbebc2ad325b3134c159dda48892}
+      \strng{authorfullhashraw}{ee4ffbebc2ad325b3134c159dda48892}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Astrophysical Journal}
+      \field{title}{A modification of the Newtonian dynamics: Implications for galaxies}
+      \field{volume}{270}
+      \field{year}{1983}
+      \field{pages}{371\bibrangedash 383}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1086/161131
+      \endverb
+    \endentry
+    \entry{Milgrom1983c}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=ee4ffbebc2ad325b3134c159dda48892}{%
+           family={Milgrom},
+           familyi={M\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{ee4ffbebc2ad325b3134c159dda48892}
+      \strng{fullhash}{ee4ffbebc2ad325b3134c159dda48892}
+      \strng{fullhashraw}{ee4ffbebc2ad325b3134c159dda48892}
+      \strng{bibnamehash}{ee4ffbebc2ad325b3134c159dda48892}
+      \strng{authorbibnamehash}{ee4ffbebc2ad325b3134c159dda48892}
+      \strng{authornamehash}{ee4ffbebc2ad325b3134c159dda48892}
+      \strng{authorfullhash}{ee4ffbebc2ad325b3134c159dda48892}
+      \strng{authorfullhashraw}{ee4ffbebc2ad325b3134c159dda48892}
+      \field{extraname}{3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Astrophysical Journal}
+      \field{title}{A modification of the Newtonian dynamics: Implications for galaxy systems}
+      \field{volume}{270}
+      \field{year}{1983}
+      \field{pages}{384\bibrangedash 389}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1086/161132
+      \endverb
+    \endentry
+    \entry{Scarpa_2006}{inproceedings}{}{}
+      \name{author}{1}{}{%
+        {{hash=59c4289108dd3a9da3ffa51eeb392330}{%
+           family={Scarpa},
+           familyi={S\bibinitperiod},
+           given={Riccardo},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {AIP}%
+      }
+      \strng{namehash}{59c4289108dd3a9da3ffa51eeb392330}
+      \strng{fullhash}{59c4289108dd3a9da3ffa51eeb392330}
+      \strng{fullhashraw}{59c4289108dd3a9da3ffa51eeb392330}
+      \strng{bibnamehash}{59c4289108dd3a9da3ffa51eeb392330}
+      \strng{authorbibnamehash}{59c4289108dd3a9da3ffa51eeb392330}
+      \strng{authornamehash}{59c4289108dd3a9da3ffa51eeb392330}
+      \strng{authorfullhash}{59c4289108dd3a9da3ffa51eeb392330}
+      \strng{authorfullhashraw}{59c4289108dd3a9da3ffa51eeb392330}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{AIP Conference Proceedings}
+      \field{title}{Modified Newtonian Dynamics, an Introductory Review}
+      \field{volume}{822}
+      \field{year}{2006}
+      \field{pages}{253\bibrangedash 265}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1063/1.2189141
+      \endverb
+    \endentry
+    \entry{a0}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=33b4c6f19ea49c35e7ac9dea7d2f98f2}{%
+           family={Begeman},
+           familyi={B\bibinitperiod},
+           given={K.\bibnamedelimi G.},
+           giveni={K\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=35b5058100b9dbaae3b578e3f74f5862}{%
+           family={Broeils},
+           familyi={B\bibinitperiod},
+           given={A.\bibnamedelimi H.},
+           giveni={A\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=6d3d0b500c054b38e02707ebcbc3ae19}{%
+           family={Sanders},
+           familyi={S\bibinitperiod},
+           given={R.\bibnamedelimi H.},
+           giveni={R\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{2a3fd95857b0e7595021f32b974abeba}
+      \strng{fullhash}{bf870609ab17b6a16bb5a2d2f62293b4}
+      \strng{fullhashraw}{bf870609ab17b6a16bb5a2d2f62293b4}
+      \strng{bibnamehash}{2a3fd95857b0e7595021f32b974abeba}
+      \strng{authorbibnamehash}{2a3fd95857b0e7595021f32b974abeba}
+      \strng{authornamehash}{2a3fd95857b0e7595021f32b974abeba}
+      \strng{authorfullhash}{bf870609ab17b6a16bb5a2d2f62293b4}
+      \strng{authorfullhashraw}{bf870609ab17b6a16bb5a2d2f62293b4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Mon. Not. R. Astron. Soc.}
+      \field{title}{Extended rotation curves of spiral galaxies: dark haloes and modified dynamics}
+      \field{volume}{249}
+      \field{year}{1991}
+      \field{pages}{523\bibrangedash 537}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1093/mnras/249.3.523
+      \endverb
+    \endentry
+    \entry{AQUAL}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=ef8c76a3e81dd04cf2f80ad83d972b6a}{%
+           family={Bekenstein},
+           familyi={B\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=ee4ffbebc2ad325b3134c159dda48892}{%
+           family={Milgrom},
+           familyi={M\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{a111e69be0b6c269b91cee731c470620}
+      \strng{fullhash}{a111e69be0b6c269b91cee731c470620}
+      \strng{fullhashraw}{a111e69be0b6c269b91cee731c470620}
+      \strng{bibnamehash}{a111e69be0b6c269b91cee731c470620}
+      \strng{authorbibnamehash}{a111e69be0b6c269b91cee731c470620}
+      \strng{authornamehash}{a111e69be0b6c269b91cee731c470620}
+      \strng{authorfullhash}{a111e69be0b6c269b91cee731c470620}
+      \strng{authorfullhashraw}{a111e69be0b6c269b91cee731c470620}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Astrophysical Journal}
+      \field{title}{Does the missing mass problem signal the breakdown of Newtonian gravity?}
+      \field{volume}{286}
+      \field{year}{1984}
+      \field{pages}{7\bibrangedash 14}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1086/162570
+      \endverb
+    \endentry
+    \entry{Slatyer}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=53c97420cab4c03a8744389dd4551bae}{%
+           family={Slatyer},
+           familyi={S\bibinitperiod},
+           given={Tracy\bibnamedelima R.},
+           giveni={T\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{53c97420cab4c03a8744389dd4551bae}
+      \strng{fullhash}{53c97420cab4c03a8744389dd4551bae}
+      \strng{fullhashraw}{53c97420cab4c03a8744389dd4551bae}
+      \strng{bibnamehash}{53c97420cab4c03a8744389dd4551bae}
+      \strng{authorbibnamehash}{53c97420cab4c03a8744389dd4551bae}
+      \strng{authornamehash}{53c97420cab4c03a8744389dd4551bae}
+      \strng{authorfullhash}{53c97420cab4c03a8744389dd4551bae}
+      \strng{authorfullhashraw}{53c97420cab4c03a8744389dd4551bae}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{title}{TASI Lectures on Indirect Detection of Dark Matter}
+      \field{year}{2017}
+      \verb{eprint}
+      \verb 1710.05137
+      \endverb
+    \endentry
+    \entry{Marco_Cirelli_2011}{article}{}{}
+      \name{author}{9}{}{%
+        {{hash=2e061928bdeeb85a91287613d03b7698}{%
+           family={Cirelli},
+           familyi={C\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+        {{hash=ca1038a09640cbaa8d5dacedf71c427f}{%
+           family={Corcella},
+           familyi={C\bibinitperiod},
+           given={Gennaro},
+           giveni={G\bibinitperiod}}}%
+        {{hash=eacc97d901f4c73b93ca5572bb26d20a}{%
+           family={Hektor},
+           familyi={H\bibinitperiod},
+           given={Andi},
+           giveni={A\bibinitperiod}}}%
+        {{hash=c160d3d56ca3c7f80c20c7a34c0f79ae}{%
+           family={Hütsi},
+           familyi={H\bibinitperiod},
+           given={Gert},
+           giveni={G\bibinitperiod}}}%
+        {{hash=76fc83030a3a7c2d5f637f9974ed60d5}{%
+           family={Kadastik},
+           familyi={K\bibinitperiod},
+           given={Mario},
+           giveni={M\bibinitperiod}}}%
+        {{hash=cec6aa54cc349d998c75d902003c63b9}{%
+           family={Panci},
+           familyi={P\bibinitperiod},
+           given={Paolo},
+           giveni={P\bibinitperiod}}}%
+        {{hash=5bc6a177ed635d84846939ad19585ba0}{%
+           family={Raidal},
+           familyi={R\bibinitperiod},
+           given={Martti},
+           giveni={M\bibinitperiod}}}%
+        {{hash=aa596114761a3d5cc071aaa4e75d740f}{%
+           family={Sala},
+           familyi={S\bibinitperiod},
+           given={Filippo},
+           giveni={F\bibinitperiod}}}%
+        {{hash=b217c027775fbf2541a4c4dcf0a78f8e}{%
+           family={Strumia},
+           familyi={S\bibinitperiod},
+           given={Alessandro},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{b01c8d5d49efcfd29484eb1fb7c447ee}
+      \strng{fullhash}{943641aac79a3701064f28c7d4062be9}
+      \strng{fullhashraw}{943641aac79a3701064f28c7d4062be9}
+      \strng{bibnamehash}{b01c8d5d49efcfd29484eb1fb7c447ee}
+      \strng{authorbibnamehash}{b01c8d5d49efcfd29484eb1fb7c447ee}
+      \strng{authornamehash}{b01c8d5d49efcfd29484eb1fb7c447ee}
+      \strng{authorfullhash}{943641aac79a3701064f28c7d4062be9}
+      \strng{authorfullhashraw}{943641aac79a3701064f28c7d4062be9}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Cosmology and Astroparticle Physics}
+      \field{title}{PPPC 4 DM ID: a poor particle physicist cookbook for dark matter indirect detection}
+      \field{volume}{2011}
+      \field{year}{2011}
+      \field{pages}{051}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1088/1475-7516/2011/03/051
+      \endverb
+    \endentry
+    \entry{hooper2018tasi}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=32d7396024041de7456d6ae92ee17fad}{%
+           family={Hooper},
+           familyi={H\bibinitperiod},
+           given={Dan},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{32d7396024041de7456d6ae92ee17fad}
+      \strng{fullhash}{32d7396024041de7456d6ae92ee17fad}
+      \strng{fullhashraw}{32d7396024041de7456d6ae92ee17fad}
+      \strng{bibnamehash}{32d7396024041de7456d6ae92ee17fad}
+      \strng{authorbibnamehash}{32d7396024041de7456d6ae92ee17fad}
+      \strng{authornamehash}{32d7396024041de7456d6ae92ee17fad}
+      \strng{authorfullhash}{32d7396024041de7456d6ae92ee17fad}
+      \strng{authorfullhashraw}{32d7396024041de7456d6ae92ee17fad}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-ph}
+      \field{eprinttype}{arXiv}
+      \field{title}{TASI lectures on indirect searches for dark matter}
+      \field{year}{2018}
+      \verb{eprint}
+      \verb 1812.02029
+      \endverb
+    \endentry
+    \entry{Lefranc_2016}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=ce0ba41ccf51e4e53ce9a44d4901c409}{%
+           family={Lefranc},
+           familyi={L\bibinitperiod},
+           given={Valentin},
+           giveni={V\bibinitperiod}}}%
+        {{hash=43f57a48a725173652c6cdbd1cc5f578}{%
+           family={Moulin},
+           familyi={M\bibinitperiod},
+           given={Emmanuel},
+           giveni={E\bibinitperiod}}}%
+        {{hash=cec6aa54cc349d998c75d902003c63b9}{%
+           family={Panci},
+           familyi={P\bibinitperiod},
+           given={Paolo},
+           giveni={P\bibinitperiod}}}%
+        {{hash=aa596114761a3d5cc071aaa4e75d740f}{%
+           family={Sala},
+           familyi={S\bibinitperiod},
+           given={Filippo},
+           giveni={F\bibinitperiod}}}%
+        {{hash=cfa0d38dc2ecec4f5ed5dc344139e369}{%
+           family={Silk},
+           familyi={S\bibinitperiod},
+           given={Joseph},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{e0991329335b7bfa9d6682b780c86e6b}
+      \strng{fullhash}{5dccc391d626dc907818160e0f1ad9fc}
+      \strng{fullhashraw}{5dccc391d626dc907818160e0f1ad9fc}
+      \strng{bibnamehash}{e0991329335b7bfa9d6682b780c86e6b}
+      \strng{authorbibnamehash}{e0991329335b7bfa9d6682b780c86e6b}
+      \strng{authornamehash}{e0991329335b7bfa9d6682b780c86e6b}
+      \strng{authorfullhash}{5dccc391d626dc907818160e0f1ad9fc}
+      \strng{authorfullhashraw}{5dccc391d626dc907818160e0f1ad9fc}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Cosmology and Astroparticle Physics}
+      \field{title}{Dark Matter in $\gamma$ lines: Galactic Center vs. dwarf galaxies}
+      \field{volume}{2016}
+      \field{year}{2016}
+      \field{pages}{043}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1088/1475-7516/2016/09/043
+      \endverb
+    \endentry
+    \entry{GouttenoireSala2019}{online}{}{}
+      \name{author}{2}{}{%
+        {{hash=83dd51c9b6c1fa0bc698241e2f9af852}{%
+           family={Gouttenoire},
+           familyi={G\bibinitperiod},
+           given={Yann},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=aa596114761a3d5cc071aaa4e75d740f}{%
+           family={Sala},
+           familyi={S\bibinitperiod},
+           given={Filippo},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{a666ba78acfaac4b327730aa946334a8}
+      \strng{fullhash}{a666ba78acfaac4b327730aa946334a8}
+      \strng{fullhashraw}{a666ba78acfaac4b327730aa946334a8}
+      \strng{bibnamehash}{a666ba78acfaac4b327730aa946334a8}
+      \strng{authorbibnamehash}{a666ba78acfaac4b327730aa946334a8}
+      \strng{authornamehash}{a666ba78acfaac4b327730aa946334a8}
+      \strng{authorfullhash}{a666ba78acfaac4b327730aa946334a8}
+      \strng{authorfullhashraw}{a666ba78acfaac4b327730aa946334a8}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{BSM in the Sky, Exercises for the Summer School on BSM Particle Physics and Cosmology, Ljubljana}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://web.archive.org/web/20240703095730/https://indico.ijs.si/event/1007/contributions/22/attachments/22/28/BSMskytuto_v2.pdf
+      \endverb
+      \verb{url}
+      \verb https://web.archive.org/web/20240703095730/https://indico.ijs.si/event/1007/contributions/22/attachments/22/28/BSMskytuto_v2.pdf
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

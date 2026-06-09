@@ -1,0 +1,78 @@
+\appendix
+
+
+\chapter{Gamma ray flux from Dark Matter annihilation} \label{app:gammaflux}
+
+The gamma ray flux produced by Dark Matter annihilation can be derived starting from the local DM density distribution.
+The number of DM pairs contained in a volume $d^3r$ at position $\vec{r}$ is
+\begin{equation} \label{dN}
+    dN = d^3r \frac{1}{2} \left( \frac{\rho_{DM}(\vec{r})}{M_{DM}} \right)^2,
+\end{equation}
+where $\rho_{DM}(\vec{r})$ is the DM energy density. It is assumed self-conjugate Dark Matter, i.e. the DM particles coincide with their antiparticles. On the other hand, in the case where DM particles can interact only with their own antiparticles, the factor $1/2$ must be replaced by $1/4$.
+There is a quadratic dependence on the density since two DM particles are required for annihilation, whereas in the case of decay the dependence would be linear. 
+The factor $1/2$ is introduced to avoid double counting of particle pairs.
+
+Assuming that a pair of DM particles annihilates into a pair of SM particles $f$, with a cross section $\langle \sigma v \rangle_f$, then multiplying \cref{dN} by $\langle \sigma v \rangle_f$ and summing over all possible final states, one obtains the number of annihilations per second in the volume $d^3r$
+
+\begin{equation}
+   \frac{dN}{dt} = d^3r \frac{1}{2} \left( \frac{\rho_{DM}(\vec{r})}{M_{DM}} \right)^2 \sum_f \langle \sigma v \rangle_f.
+\end{equation}
+
+Now multiplying this rate by the number of photons produced per annihilation in the channel $f$ within an infinitesimal energy bin $dE$, i.e. $\frac{dN_{f\to\gamma}}{dE}dE$, one obtains the number of photons produced per unit time and energy
+
+\begin{equation}
+   \frac{dN_{\gamma}}{dtdE} = d^3r \frac{1}{2} \left( \frac{\rho_{DM}(\vec{r})}{M_{DM}} \right)^2 \sum_f \langle \sigma v \rangle_f \frac{dN_{f\to\gamma}}{dE}. 
+\end{equation}
+
+As shown in \cref{GammaRay}, a telescope with surface $S_{tel}$ receiving signals within a solid angle $\Delta\Omega$ and within an energy bin $\Delta E$ detects only a fraction 
+\begin{equation}
+\frac{\Delta\Omega}{4\pi} \frac{S_{tel}}{4\pi r^2}
+\end{equation}
+
+of the total number of photons produced.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.40]{GammaRay.png}
+\caption{\emph{The detected $\gamma$-ray flux is the fraction $\frac{\Delta\Omega}{4\pi} \frac{S_{tel}}{4\pi r^2}$ of the total emission \cite{GouttenoireSala2019}.}}
+\label{GammaRay}
+\end{figure}
+
+Finally, integrating over the line of sight $s$, one obtains the differential photon flux per unit solid angle and energy:
+
+\begin{equation} \label{Annihilation}
+    \frac{d\Phi_\gamma}{d\Omega dE} (\theta) = \frac{1}{2} \frac{r_\odot}{4\pi} \left( \frac{\rho_\odot}{M_{DM}} \right)^2 J_{ann}(\theta) \sum_f \langle \sigma v \rangle_f \frac{dN_{f\to\gamma}}{dE},
+\end{equation}
+
+where in the particular case of the Milky Way
+
+\begin{equation}
+    J_{ann} (\theta) = \int_{l.o.s} \frac{ds}{r_\odot} \left( \frac{\rho_{DM}(r(s, \theta))}{\rho_\odot} \right)^2
+\end{equation}
+
+is the annihilation J-factor, $r_\odot \simeq 8.33$~kpc is the distance from the Earth to the Galactic Center, $\rho_\odot \simeq 0.3~\text{GeV/cm}^3$ is the local DM energy density, and $s$ is related to $r$ through $r = \sqrt{r_\odot^{2} + s^{2} - 2\,r_\odot\, s \cos\theta}\, $.
+
+Note that a similar treatment for DM decay leads to
+
+\begin{equation} \label{Decay}
+\frac{d\Phi_\gamma}{d\Omega\, dE} (\theta)
+=
+\frac{r_\odot}{4\pi}
+\left(\frac{\rho_\odot}{M_{DM}}\right)
+J_{dec}(\theta)
+\sum_{f}\Gamma_f\,
+\frac{dN_{f\to\gamma}}{dE}\,,
+\end{equation}
+
+where
+
+\begin{equation} 
+J_{dec} (\theta)
+=
+\int_{l.o.s} \frac{ds}{r_\odot}
+\left(\frac{\rho_{DM}(r(s, \theta))}{\rho_\odot}\right)\,
+\label{eq:Jdec}
+\end{equation}
+
+is the J-factor for decay and $\Gamma_f$ is the decay rate in the channel $f$. As expected, a linear dependence on the Dark Matter density is obtained.
+

@@ -1,0 +1,161 @@
+\documentclass[12pt,a4paper,openright,twoside]{report}
+\usepackage[T1]{fontenc}
+\usepackage[italian, english]{babel}
+\usepackage{newlfont}
+\usepackage{color}
+\usepackage{float} 
+\usepackage{caption}
+\usepackage[a4paper, margin=2.5cm]{geometry}
+%\usepackage[a4paper, 
+%            top=2.5cm, 
+%            bottom=2.5cm, 
+%            inner=3cm,     % Margine verso la rilegatura
+%            outer=2cm,     % Margine verso l'esterno
+%            bindingoffset=0.5cm] % Spazio extra per la colla
+%            {geometry}
+\usepackage[hidelinks]{hyperref} 
+\usepackage{bookmark}   
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % pulisce header/footer
+\fancyhead[L]{\nouppercase{\leftmark}}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\usepackage{emptypage}
+\newcommand{\blankpage}{
+    \newpage
+    \thispagestyle{empty}
+    \mbox{}
+    \newpage
+}
+\usepackage{cleveref}
+\setlength{\headheight}{14.5pt}
+
+
+
+
+
+
+
+\usepackage{csquotes}
+\usepackage[
+  backend=biber,
+  style=numeric,
+  sorting=none,
+  maxnames=2,
+  giveninits=true,
+  doi=true,
+  eprint=true,
+  url=true
+]{biblatex}
+\addbibresource{bibliografia.bib}
+
+\DefineBibliographyStrings{english}{andothers = {et~al.}}
+\DeclareFieldFormat[article]{title}{\mkbibemph{#1}}
+\renewcommand*{\newunitpunct}{\addcomma\space}
+
+% Soppressioni
+\AtEveryBibitem{\clearfield{issn}}
+\AtEveryBibitem{\ifentrytype{online}{\clearfield{note}}{}}
+\AtEveryBibitem{%
+  \ifentrytype{article}{%
+    \clearfield{month}\clearfield{day}\clearfield{number}%
+  }{}%
+}
+
+% Formato HEP per articoli
+\renewbibmacro{in:}{}
+\DeclareFieldFormat{pages}{#1}
+
+% Journaltitle cliccabile al DOI
+\DeclareFieldFormat{journaltitle}{%
+  \iffieldundef{doi}
+    {\mkbibemph{#1}}
+    {\href{https://doi.org/\thefield{doi}}{\mkbibemph{#1}}}%
+}
+
+% arXiv cliccabile tra quadre
+\renewbibmacro*{eprint}{%
+  \iffieldundef{eprint}{}
+    {\href{https://arxiv.org/abs/\thefield{eprint}}{[\texttt{\thefield{eprint}}]}}%
+}
+
+% Solo arXiv esplicito, DOI è già nel titolo rivista
+\renewbibmacro*{doi+eprint+url}{%
+  \iffieldundef{eprint}{}{\usebibmacro{eprint}}%
+}
+
+% Online: titolo cliccabile direttamente
+\DeclareFieldFormat[online]{title}{\href{\thefield{url}}{\mkbibemph{#1}}}
+
+
+\AtEveryBibitem{%
+  \ifentrytype{article}{%
+    \clearfield{month}\clearfield{day}\clearfield{number}\clearfield{issue}%
+  }{}%
+}
+
+% Booktitle cliccabile al DOI (per @inproceedings)
+\DeclareFieldFormat{booktitle}{%
+  \iffieldundef{doi}
+    {\mkbibemph{#1}}
+    {\href{https://doi.org/\thefield{doi}}{\mkbibemph{#1}}}%
+}
+
+
+
+
+
+
+
+
+
+\raggedbottom
+\graphicspath{{./immagini/}}
+
+\begin{document}
+
+
+
+\pagenumbering{gobble}
+\include{frontespizio}
+\cleardoublepage
+
+
+
+\pagenumbering{roman}
+\pagestyle{plain}
+\include{abstract}
+\cleardoublepage
+
+
+
+%Indice
+\tableofcontents
+\cleardoublepage
+
+
+
+\pagenumbering{arabic}
+\pagestyle{fancy}
+
+
+
+\include{capitolo1}
+
+
+
+\include{appendice}
+
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Bibliografia}
+\printbibliography
+
+
+
+
+\end{document}
