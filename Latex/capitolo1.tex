@@ -6,12 +6,14 @@ The objective of this thesis is ...
           The primary source of information for this chapter is \emph{Dark Matter} \cite{cirelli2025darkmatter}, one of the most complete review on Dark Matter written to date.
     \item In the second chapter,
 \end{itemize}
+
+All the code developed and used in this work for numerical calculations is available on \href{https://github.com/IvanDalena/Bachelor-thesis}{GitHub}.
  
 Cose da sistemare:
--Usa "we" per rendere più scorrevoli le frasi, non è un problema.
--Aggiungi le referenze per ogni paper originale (per i profili di densità di DM) e per i dati usati (nella figura 2.1 cita Planck (quale?))
+
+
 -Riproduci tutti i dati tramite codice fatto da te, in particolare i J factor della tab nel GC
--Lascia un link GitHub per tutto il codice
+
 
 
 
@@ -46,7 +48,7 @@ The present cosmological Dark Matter density, averaged over the total matter-ene
     \end{minipage}
 
     \vspace{0.3cm} % Spazio estetico tra foto e didascalia
-    \caption{\emph{Content of the Universe today (left) and, for comparison, at the time of photon decoupling (right). The different components evolve differently in cosmology \cite{cirelli2025darkmatter}.}}
+    \caption{\emph{Content of the Universe today (left) and, for comparison, at the time of photon decoupling (right). The different components evolve differently in cosmology \cite{cirelli2025darkmatter,Planck2018}.}}
     \label{UniverseContent}
 \end{figure}
 
@@ -112,7 +114,7 @@ The crucial point is that the observations of a large sample of galaxies of this
 To explain this discrepancy, additional invisible mass must be present to prevent the peripheral stars from flying away and the galaxies from breaking apart. Assuming spherical symmetry, \cref{circular} shows that a constant velocity $v_{\mathrm{circ}}(r)$ is obtained assuming a matter \emph{halo} that has mass density $\rho(r) \propto \frac{1}{r^{2}}$ out to large $r$: 
 in this way, $M(r)=4\pi \int dr'\,{r'}^{2}\rho(r') = 4\pi r$ so that the dependence of $v_{\mathrm{circ}}(r)$ on $r$ vanishes. Eventually, at even larger $r$, the halo is expected to die off and the rotation curve to start declining. However, no traces are typically available at such large distances \cite{cirelli2025darkmatter}.
 
-To describe the Dark Matter distribution in more detail, numerical simulations are used: from $N$-body simulations, including only the Dark Matter component, one obtains a profile known as the Navarro-Frenk-White (NFW)
+To describe the Dark Matter distribution in more detail, numerical simulations are used: from $N$-body simulations, including only the Dark Matter component, one obtains a profile known as the Navarro-Frenk-White (NFW) \cite{NFW1996,NFW1997}
 
 
 \begin{equation} \label{NFW}
@@ -132,7 +134,7 @@ where $r_s$ is a characteristic parameter called scale radius \cite{Lisanti:ICTP
 \subsection{Galaxy clusters}
 
 
-The first evidence of a mass-to-light discrepancy dates back to 1933, when Fritz Zwicky studied the velocity dispersion of several galaxy clusters and obtained unexpected results \cite{Zwicky}.
+The first evidence of a mass-to-light discrepancy dates back to 1933, when Fritz Zwicky studied the velocity dispersion of several galaxy clusters and obtained unexpected results \cite{Zwicky1933,Zwicky}.
 Using the virial theorem, he estimated the mass of the clusters from the velocity dispersion of the galaxies, measured through Doppler shift, and found large discrepancies with the mass inferred from the observed luminous matter.
 Zwicky is also credited with introducing the term \emph{Dark Matter}, although the concept itself had already been present in the scientific community for some years \cite{History}.
 
@@ -332,8 +334,9 @@ The $J$ factors for different DM profiles are plotted in \cref{Jfactor_plot} as 
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.55]{J-factor.png}
-\caption{\emph{$J$ factors for different DM profiles. From top to bottom, the color individuates the profiles: Moore, NFW, EinastoB, Einasto, Iso, Burkert \cite{Marco_Cirelli_2011}}.}
+\includegraphics[scale=0.50]{J-factor.png}
+\caption{\emph{$J$ factors for different DM profiles. From top to bottom, the color individuates the profiles: Moore \cite{Moore1999}, NFW \cite{NFW1996,NFW1997}, EinastoB, Einasto \cite{Einasto1965}, Iso \cite{Begeman1991}, Burkert \cite{Burkert1995}. 
+               Einasto and EinastoB have the same functional form but different value of the parameter \cite{Marco_Cirelli_2011}. } }
 \label{Jfactor_plot}
 \end{figure}
 
@@ -369,8 +372,8 @@ These simulations agree that the DM profile of MW-like galaxies develops a peak 
 
 As long as a clearer determination of the DM profile in the inner MW regions is not achieved, it is worth considering a range of possible choices and compare them. 
 In particular, the two limiting cases are: a peaked profile, in which the density diverges as a power law towards the GC, and a cored one, in which the density flattens to a finite central value. 
-Therefore, in what follows it is considered the Einasto (peaked), Burkert (cored) 
-and NFW with a variable core radius $r_c$ as representative DM density profiles 
+Therefore, in what follows it is considered the Einasto (peaked) \cite{Einasto1965}, Burkert (cored) \cite{Burkert1995} 
+and NFW \cite{NFW1996,NFW1997} with a variable core radius $r_c$ as representative DM density profiles 
 $\rho_\mathrm{DM}(r)$.
 
 
@@ -392,7 +395,9 @@ For the Einasto and Burkert profiles, the functional forms read
 \frac{\rho_s}{\left(1+\dfrac{r}{r_s}\right)\left(1+\left(\dfrac{r}{r_s}\right)^2\right)}.
 \end{equation}
 
-where $\alpha = 0.17$. The functional form of the cored NFW is
+where $\alpha = 0.17$.
+
+The functional form of the cored NFW is
 
 
 \begin{equation}
@@ -418,7 +423,7 @@ The $J$-factors are integrated over an angular region, centred on the GC, define
 
 where $\theta > 0^\circ$ is the polar angle with respect to the GC direction 
 and $b$ is the galactic latitude with respect to the disk plane. At the Sun's 
-distance $r_\odot = 8.33$~kpc, the angles $1^\circ$ and $0.3^\circ$ correspond 
+distance $r_\odot = 8.33$~kpc, the angles $1^\circ$ and $0.4^\circ$ correspond 
 to projected distances of approximately 145~pc and 44~pc from the GC, respectively. 
 The choice of $|b| > 0.3^\circ$ is motivated by the need to mask the large photon backgrounds from the galactic ridge.
 The results are reported in \cref{tab:gc_jfactors}, where for the cored NFW has been used three illustrative values of $r_c$.
@@ -431,7 +436,7 @@ The results are reported in \cref{tab:gc_jfactors}, where for the cored NFW has 
  & Einasto & Burkert & $\mathrm{NFW}_{30\,\mathrm{pc}}$ & $\mathrm{NFW}_{300\,\mathrm{pc}}$ & $\mathrm{NFW}_{3\,\mathrm{kpc}}$ \\
 \hline
 $\log_{10}\!\left(J_{\Omega_{\mathrm{obs}}}\,\left[\dfrac{\mathrm{GeV}^2}{\mathrm{cm}^5}\right]\right)$
-& 21.15 & 18.93 & 21.04 & 20.63 & 19.38 \\
+& 21.96 & 19.35 & 21.57 & 21.16 & 19.77 \\
 \hline
 \end{tabular}
 \caption{Galactic Center integrated $J$-factors, with NFW core radii reported as pedices \cite{Lefranc_2016}.}
@@ -445,7 +450,7 @@ the upper bounds on the DM annihilation cross-section: since the predicted flux 
 $J$-factor, the upper bound on $\langle \sigma v \rangle$ is inversely 
 proportional to it. Consequently, a more peaked profile yields a stronger constraint than a cored one.
 In particular, the upper bound on $\langle \sigma v \rangle$ derived under the Burkert assumption 
-is roughly a factor $\sim 160$ weaker than the one obtained under Einasto.
+is roughly a factor $\sim 4 \times 10^2$ weaker than the one obtained under Einasto.
 
 
 
