@@ -1,0 +1,206 @@
+% !LW recipe = pdflatex
+\documentclass[aspectratio=169,12pt]{beamer}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+\setbeamertemplate{caption}[numbered]
+
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\graphicspath{{./images/}}
+
+% Citazioni "leggere": niente biblatex/biber per una build snella e veloce
+\newcommand{\paper}[1]{{\footnotesize\textcolor{gray}{[#1]}}}
+
+\title[Dark matter spikes vicino ai buchi neri galattici]{Dark matter spikes vicino ai buchi neri galattici\\e il loro impatto sui segnali di DM ai telescopi}
+\author{Giovanni Dalena}
+\institute[UniBo]{Alma Mater Studiorum -- Universit\`a di Bologna\\Dipartimento di Fisica e Astronomia ``Augusto Righi''\\Corso di Laurea in Fisica\\[4pt]\small Relatore: Prof.\ Filippo Sala}
+\date{Anno Accademico 2025/2026}
+
+\begin{document}
+
+% ---------------------------------------------------------------
+\begin{frame}
+    \titlepage
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Struttura della presentazione}
+    \begin{enumerate}
+        \item Evidenze della dark matter e ricerca indiretta
+        \item Il fattore $J$ e il caso del Centro Galattico
+        \item Spikes di dark matter attorno a buchi neri
+        \item Stato del lavoro e prospettive
+    \end{enumerate}
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Perch\'e la dark matter}
+    \begin{columns}[T]
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item Curve di rotazione piatte nelle galassie a spirale
+                \item Dispersione di velocit\`a negli ammassi (Zwicky, Coma)
+                \item Bullet Cluster: separazione tra materia barionica e massa gravitante
+                \item CMB e Large Scale Structures: $\Omega_{DM} \simeq 0.264$
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \centering
+            \includegraphics[width=0.95\textwidth]{RCM31.png}\\[2pt]
+            {\tiny Curva di rotazione di M31 \paper{Rubin \& Ford 1970}}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{WIMP e ricerca indiretta}
+    \begin{columns}[T]
+        \begin{column}{0.55\textwidth}
+            \small
+            \begin{itemize}
+                \item WIMP: candidato ben motivato, massa GeV--TeV, interazione debole
+                \item \emph{Freeze-out} termico $\Rightarrow$ \emph{WIMP miracle}:
+                \[
+                \langle\sigma v\rangle \simeq 3\times10^{-26}\ \mathrm{cm^3/s}
+                \]
+                \item Rivelazione indiretta: cerchiamo l'eccesso di particelle SM prodotte da annichilazione/decadimento di DM
+                \item Messaggeri principali: raggi $\gamma$, neutrini, raggi cosmici carichi
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.45\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{DMannihilation.png}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Il fattore $J$}
+    Il flusso di raggi $\gamma$ da annichilazione dipende dalla fisica delle particelle e dalla distribuzione astrofisica di DM:
+    \[
+    \frac{d\Phi_\gamma}{d\Omega\,dE}
+    =
+    \underbrace{\frac{1}{8\pi M_{DM}^2}\sum_f \langle\sigma v\rangle_f \frac{dN_{f\to\gamma}}{dE}}_{\text{fisica delle particelle}}
+    \;\times\;
+    \underbrace{\int_{\text{l.o.s.}} ds\ \rho_{DM}^2(\vec r)}_{\displaystyle J\text{-factor}}
+    \]
+    \begin{itemize}
+        \item Il fattore $J$ raccoglie tutta l'informazione astrofisica (dipende dal quadrato della densit\`a $\Rightarrow$ regioni dense sono privilegiate)
+        \item Target ideali: alta densit\`a di DM, vicini, background astrofisico basso
+    \end{itemize}
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Il Centro Galattico: potenziale e incertezze}
+    \begin{columns}[T]
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item Sorgente pi\`u brillante attesa per DM $\Rightarrow$ flusso $> 3$ ordini di grandezza rispetto alle dwarf galaxies
+                \item Ma: background barionico elevato, profilo di DM incerto vicino al centro
+                \item Confrontiamo profili cored (Burkert) vs cuspy (NFW, Einasto)
+            \end{itemize}
+            \vspace{4pt}
+            {\scriptsize Il rapporto tra i $J$-factor di Einasto e Burkert \`e $\sim 400$: il profilo scelto cambia drasticamente il limite su $\langle\sigma v\rangle$.}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \centering
+            \includegraphics[width=0.85\textwidth]{J-factor.png}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Limiti sulla sezione d'urto di annichilazione}
+    \begin{columns}[T]
+        \begin{column}{0.45\textwidth}
+            \begin{itemize}
+                \item Modello a due mediatori: $\chi\chi \to \phi\phi \to WW+WW$
+                \item Confronto con i limiti H.E.S.S. al 95\% C.L. \paper{Abdalla et al.\ 2022}
+                \item Un profilo pi\`u piccato $\Rightarrow$ $J$ maggiore $\Rightarrow$ limite pi\`u forte
+                \item Per NFW, il valore di thermal relic resta \emph{non escluso}
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.55\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{Cross_section.png}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Il buco nero centrale e gli spikes di DM}
+    \begin{itemize}
+        \item Al centro della Via Lattea: buco nero supermassiccio Sgr A*, $M = (2.6\pm0.2)\times10^6\,M_\odot$ \paper{Eckart \& Genzel 1997; Ghez et al.\ 1998}
+        \item Se la DM \`e presente nella regione centrale ($r \lesssim 0.2$ pc), il buco nero ne ridistribuisce le orbite $\Rightarrow$ \textbf{spike}
+        \item L'annichilazione $\propto \rho_{DM}^2$: uno spike amplifica fortemente il segnale atteso
+    \end{itemize}
+    \vspace{6pt}
+    \begin{block}{Crescita adiabatica}
+        Il buco nero cresce su tempi $\gg$ tempo orbitale delle particelle di DM $\Rightarrow$ si conservano il momento angolare e l'azione radiale: la DM non viene creata, solo redistribuita.
+    \end{block}
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Relazione di Gondolo-Silk}
+    \begin{columns}[T]
+        \begin{column}{0.55\textwidth}
+            Halo iniziale con profilo a legge di potenza $\rho \propto r^{-\gamma}$: lo spike risultante ha
+            \[
+            \rho_{sp}(r) \propto r^{-\gamma_{sp}},
+            \qquad
+            \gamma_{sp} = \frac{9-2\gamma}{4-\gamma}
+            \]
+            \begin{itemize}
+                \item Per NFW ($\gamma=1$): $\gamma_{sp} = 7/3$
+                \item Profilo completo NFW + Gondolo-Silk \paper{Gondolo \& Silk 1999}:
+            \end{itemize}
+            \[
+            \rho(r) =
+            \begin{cases}
+                \rho_{\rm NFW}(R_{sp})\left(\dfrac{r}{R_{sp}}\right)^{-7/3}, & r < R_{sp}\\[4pt]
+                \rho_{\rm NFW}(r), & r \geq R_{sp}
+            \end{cases}
+            \]
+        \end{column}
+        \begin{column}{0.45\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{Spike_slope.png}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Stato del lavoro}
+    \textbf{Fatto finora} (Capitolo 1 e prima parte del Capitolo 2):
+    \begin{itemize}
+        \item Formalismo di rivelazione indiretta e del fattore $J$
+        \item Confronto tra profili di DM al Centro Galattico e limiti sulla sezione d'urto
+        \item Derivazione della crescita adiabatica dello spike e della relazione di Gondolo-Silk
+    \end{itemize}
+    \vspace{6pt}
+    \textbf{Lavoro in corso}:
+    \begin{itemize}
+        \item Incertezze astrofisiche sul profilo dello spike (raggio di saturazione da annichilazione, riscaldamento stellare)
+        \item Calcolo del fattore $J$ per lo spike e confronto quantitativo con il caso senza buco nero
+        \item Impatto sui limiti/prospettive di rivelazione ai telescopi $\gamma$
+    \end{itemize}
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Conclusioni e prospettive}
+    \begin{itemize}
+        \item La presenza di un buco nero centrale pu\`o amplificare enormemente il segnale di annichilazione di DM
+        \item L'entit\`a dell'amplificazione dipende in modo critico dal profilo dell'halo e dai processi che smussano lo spike
+        \item Obiettivo finale: quantificare l'impatto dello spike sui limiti/prospettive di rivelazione al Centro Galattico
+    \end{itemize}
+    \vfill
+    \centering
+    {\large Grazie per l'attenzione}
+\end{frame}
+
+\end{document}

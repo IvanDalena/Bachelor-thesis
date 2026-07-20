@@ -1,18 +1,121 @@
+% Impaginato a mano (senza l'ambiente abstract): nella classe report
+% l'ambiente abstract passa da titlepage, che azzera il contatore di
+% pagina e spezza la numerazione romana continua.
+
 \thispagestyle{empty}
+\null\vfil
 
-
-
-\begin{abstract}
+\begin{center}
+  \bfseries Sommario
+\end{center}
 
 \vspace{1cm}
 
+% ============================================================
+% SCALETTA SOMMARIO (~200-300 parole, 4-5 frasi/brevi paragrafi)
+% Un abstract e' la tesi in miniatura: contesto -> cosa fai ->
+% come -> risultato -> messaggio. Una o due frasi per punto.
+% ============================================================
+%
+% 1. CONTESTO (1-2 frasi)
+%    - La materia oscura: evidenza consolidata ma natura ignota;
+%      i WIMP/relitti termici come candidati di riferimento.
+%    - La rivelazione indiretta in raggi gamma dal Centro Galattico
+%      e' tra le sonde piu' sensibili, ma dipende dal profilo di
+%      densita' della DM, che nelle regioni interne e' molto incerto.
+%
+% 2. OBIETTIVO (1 frase)
+%    - Quantificare l'impatto di questa incertezza sui vincoli alla
+%      cross section di annichilazione dal Centro Galattico.
+%
+% 3. METODO E RISULTATI - ALONE (2-3 frasi)
+%    - Confronto di profili rappresentativi (Einasto, Burkert, NFW
+%      con core) fittati sugli stessi vincoli osservativi; i J-factor
+%      sulla regione del GC variano di oltre 2 ordini di grandezza.
+%    - Modello minimale di relitto termico (chi chi -> phi phi -> 4W)
+%      confrontato con i limiti H.E.S.S. Inner Galaxy Survey riscalati:
+%      non escluso a nessuna massa, ne' per NFW ne' per il cored.
+%
+% 4. METODO E RISULTATI - SPIKE (2 frasi)
+%    - Spike adiabatica attorno a Sgr A*: relazione pendenza
+%      spike-alone, incertezze, due benchmark (GS e LSH).
+%    - Con la spike GS il relitto termico e' escluso per
+%      m_DM >~ 3.5 TeV; con la LSH resta permesso a tutte le masse.
+%
+% 5. MESSAGGIO FINALE (1 frase)
+%    - Il potere vincolante delle osservazioni del GC dipende in modo
+%      critico dalla distribuzione interna della DM (core su scale kpc,
+%      spike su scale sub-pc): la stessa misura esclude o meno il
+%      modello a seconda del profilo assunto.
+%
+% ============================================================
+
 \noindent
-Text..
-    
-\end{abstract}
+
+
+
+Lo studio della materia oscura è uno dei temi principali della fisica oltre il Modello Standard degli ultimi decenni.
+Ad oggi sono state raccolte numerose evidenze astrofisiche che suggeriscono la presenza di materia aggiuntiva non barionica, detta appunto materia oscura,
+ma la sua natura non è ancora stata determinata.
+I candidati di riferimento sono i WIMP, particelle ipotetiche che interagiscono tramite interazione gravitazionale e debole, 
+la cui abbondanza è spiegata naturalmente dal meccanismo della reliquia termica. 
+
+L'obiettivo della tesi è studiare l'impatto delle incertezze relative al profilo di densità della materia oscura nella Via Lattea sui vincoli di rivelazione indiretta ottenuti dal Centro Galattico, il bersaglio più promettente per questo tipo di ricerca.
+Vengono trattati quindi alcuni profili rappresentativi, fissandone i parametri tramite vincoli osservativi e calcolando i corrispondenti $J$-factor, che nella regione centrale variano di oltre due ordini di grandezza da un profilo all'altro.
+Un semplice modello di reliquia termica è poi confrontato con i limiti sperimentali sulla sezione d'urto di annichilazione per valutarne la compatibilità. 
+Nel Centro Galattico è inoltre presente il buco nero supermassiccio Sgr A*,
+la cui crescita adiabatica può ridistribuire la materia oscura circostante in una cuspide molto densa, detta spike.
+A tal proposito vengono definiti due benchmark: la spike di Gondolo--Silk (GS) e una versione attenuata dal riscaldamento stellare (LSH).
+Il confronto del modello di reliquia termica con i profili di densità dotati di spike
+mostra chiaramente come i vincoli osservativi dipendano in modo critico dalla distribuzione interna di materia oscura:
+nel benchmark di GS la materia oscura con sezione d'urto termica risulta esclusa per masse superiori a circa $3.5\,\mathrm{TeV}$, mentre nel caso LSH rimane consentita a tutte le masse.
+
+
+
+
+
+\vfil\null
+\cleardoublepage
+
+
+
+\thispagestyle{empty}
+\null\vfil
+
+\begin{center}
+  \bfseries Abstract
+\end{center}
+
+\vspace{1cm}
+
+% ============================================================
+% ABSTRACT (inglese): stessa scaletta del Sommario qui sopra,
+% stessi 5 punti — contesto, obiettivo, risultati alone,
+% risultati spike, messaggio finale. Traduzione fedele ma non
+% letterale del Sommario.
+% ============================================================
+
+\noindent
+
+
+
+
+The study of dark matter has been one of the main topics in physics beyond the Standard Model over the past decades.
+To date, considerable astrophysical evidence points to the existence of additional non-baryonic matter, known as dark matter, whose nature has not yet been determined.
+The leading candidates are WIMPs, hypothetical particles interacting through the gravitational and weak interactions, whose abundance is naturally explained by the thermal relic mechanism.
+The aim of this thesis is to study the impact of the uncertainties on the dark matter density profile of the Milky Way on the indirect detection constraints obtained from the Galactic Center, the most promising target for this kind of search.
+We introduce a set of representative profiles, fixing their parameters through observational constraints and computing the corresponding J-factors, which in the central region vary by more than two orders of magnitude across the different profiles.
+A simple thermal relic model is then compared with the experimental limits on the annihilation cross section to assess their compatibility.
+Moreover, the Galactic Center hosts the supermassive black hole Sgr A*, whose adiabatic growth can redistribute the surrounding dark matter into a very dense cusp, known as a spike.
+In this context, two benchmarks are defined: the Gondolo--Silk (GS) spike and a version softened by stellar heating (LSH).
+The comparison of the thermal relic model with the spiked density profiles clearly shows that the observational constraints depend critically on the inner dark matter distribution:
+in the GS benchmark, dark matter with a thermal cross section is excluded for masses above about $3.5\,\mathrm{TeV}$, whereas in the LSH case it remains allowed at all masses.
+
+
+
+
+\vfil\null
 
 
 
 %\addcontentsline{toc}{chapter}{Abstract}
-
-

@@ -1,6 +1,6 @@
 \documentclass[12pt,a4paper,openright,twoside]{report}
 \usepackage[T1]{fontenc}
-\usepackage[italian, english]{babel}
+\usepackage[english]{babel}
 \usepackage{newlfont}
 \usepackage{color}
 \usepackage{float} 
@@ -37,8 +37,6 @@
 
 
 
-
-
 \usepackage{csquotes}
 \usepackage[
   backend=biber,
@@ -50,10 +48,14 @@
   eprint=true,
   url=true
 ]{biblatex}
-\addbibresource{bibliografia.bib}
+\addbibresource{bibliography.bib}
 
 \DefineBibliographyStrings{english}{andothers = {et~al.}}
-\DeclareFieldFormat[article]{title}{\mkbibemph{#1}}
+
+% Titolo articolo in TONDO, giornale resta in CORSIVO — differenziano i due
+\DeclareFieldFormat[article]{title}{#1}
+\DeclareFieldFormat[inproceedings]{title}{#1}
+
 \renewcommand*{\newunitpunct}{\addcomma\space}
 
 % Soppressioni
@@ -61,16 +63,31 @@
 \AtEveryBibitem{\ifentrytype{online}{\clearfield{note}}{}}
 \AtEveryBibitem{%
   \ifentrytype{article}{%
-    \clearfield{month}\clearfield{day}\clearfield{number}%
+    \clearfield{month}\clearfield{day}\clearfield{number}\clearfield{issue}%
   }{}%
 }
 
-% Formato HEP per articoli
+% Formato HEP
 \renewbibmacro{in:}{}
 \DeclareFieldFormat{pages}{#1}
 
-% Journaltitle cliccabile al DOI
+
+\DeclareFieldFormat[article]{title}{\mkbibemph{#1}}
+\DeclareFieldFormat[misc]{title}{\mkbibemph{#1}}
+\DeclareFieldFormat[inproceedings]{title}{\mkbibemph{#1}}
+
 \DeclareFieldFormat{journaltitle}{%
+  \iffieldundef{doi}
+    {#1}
+    {\href{https://doi.org/\thefield{doi}}{#1}}%
+}
+\DeclareFieldFormat{booktitle}{%
+  \iffieldundef{doi}
+    {#1}
+    {\href{https://doi.org/\thefield{doi}}{#1}}%
+}
+% Libri: titolo corsivo e cliccabile se c'è il DOI
+\DeclareFieldFormat[book]{title}{%
   \iffieldundef{doi}
     {\mkbibemph{#1}}
     {\href{https://doi.org/\thefield{doi}}{\mkbibemph{#1}}}%
@@ -87,25 +104,8 @@
   \iffieldundef{eprint}{}{\usebibmacro{eprint}}%
 }
 
-% Online: titolo cliccabile direttamente
+% Online: titolo corsivo e cliccabile
 \DeclareFieldFormat[online]{title}{\href{\thefield{url}}{\mkbibemph{#1}}}
-
-
-\AtEveryBibitem{%
-  \ifentrytype{article}{%
-    \clearfield{month}\clearfield{day}\clearfield{number}\clearfield{issue}%
-  }{}%
-}
-
-% Booktitle cliccabile al DOI (per @inproceedings)
-\DeclareFieldFormat{booktitle}{%
-  \iffieldundef{doi}
-    {\mkbibemph{#1}}
-    {\href{https://doi.org/\thefield{doi}}{\mkbibemph{#1}}}%
-}
-
-
-
 
 
 
@@ -113,14 +113,14 @@
 
 
 \raggedbottom
-\graphicspath{{./immagini/}}
+\graphicspath{{./images/}}
 
 \begin{document}
 
 
 
 \pagenumbering{gobble}
-\include{frontespizio}
+\include{titlepage}
 \cleardoublepage
 
 
@@ -143,16 +143,22 @@
 
 
 
-\include{capitolo1}
+\include{introduction}
 
+\include{chapter1}
 
+\include{chapter2}
 
-\include{appendice}
+\include{chapter3}
+
+\include{conclusions}
+
+\include{appendix}
 
 
 \cleardoublepage
 \phantomsection
-\addcontentsline{toc}{chapter}{Bibliografia}
+\addcontentsline{toc}{chapter}{Bibliography}
 \printbibliography
 
 

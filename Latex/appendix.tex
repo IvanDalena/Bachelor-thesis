@@ -1,0 +1,737 @@
+\appendix
+
+
+\chapter{Gamma ray flux from dark matter annihilation} \label{app:gammaflux}
+
+The gamma ray flux produced by dark matter annihilation can be derived starting from the local DM density distribution.
+The number of DM pairs contained in a volume $d^3r$ at position $\vec{r}$ is
+\begin{equation} \label{dN}
+    dN = d^3r \frac{1}{2} \left( \frac{\rho_{\mathrm{DM}}(\vec{r})}{m_{\mathrm{DM}}} \right)^2,
+\end{equation}
+where $\rho_{\mathrm{DM}}(\vec{r})$ is the DM energy density. We assume self-conjugate dark matter, i.e. the DM particles coincide with their antiparticles. On the other hand, in the case where DM particles can interact only with their own antiparticles, the factor $1/2$ must be replaced by $1/4$.
+There is a quadratic dependence on the density since two DM particles are required for annihilation, whereas in the case of decay the dependence would be linear.
+We introduce the factor $1/2$ to avoid double counting of particle pairs.
+
+Assuming that a pair of DM particles annihilates into a pair of SM particles $f$, with a cross section $\langle \sigma v \rangle_f$, then multiplying \cref{dN} by $\langle \sigma v \rangle_f$ and summing over all possible final states, we obtain the number of annihilations per second in the volume $d^3r$
+
+\begin{equation}
+   \frac{dN}{dt} = d^3r \frac{1}{2} \left( \frac{\rho_{\mathrm{DM}}(\vec{r})}{m_{\mathrm{DM}}} \right)^2 \sum_f \langle \sigma v \rangle_f.
+\end{equation}
+
+Now multiplying this rate by the number of photons produced per annihilation in the channel $f$ within an infinitesimal energy bin $dE$, i.e. $\frac{dN_{f\to\gamma}}{dE}dE$, we obtain the number of photons produced per unit time and energy
+
+\begin{equation}
+   \frac{dN_{\gamma}}{dtdE} = d^3r \frac{1}{2} \left( \frac{\rho_{\mathrm{DM}}(\vec{r})}{m_{\mathrm{DM}}} \right)^2 \sum_f \langle \sigma v \rangle_f \frac{dN_{f\to\gamma}}{dE}. 
+\end{equation}
+
+As we show in \cref{GammaRay}, a telescope with surface $S_{\mathrm{tel}}$ receiving signals within a solid angle $\Delta\Omega$ and within an energy bin $\Delta E$ detects only a fraction
+\begin{equation}
+\frac{\Delta\Omega}{4\pi} \frac{S_{\mathrm{tel}}}{4\pi r^2}
+\end{equation}
+
+of the total number of photons produced.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{GammaRay.png}
+\caption{\emph{The detected $\gamma$-ray flux is the fraction $\frac{\Delta\Omega}{4\pi} \frac{S_{\mathrm{tel}}}{4\pi r^2}$ of the total emission \cite{GouttenoireSala2019}.}}
+\label{GammaRay}
+\end{figure}
+
+Finally, integrating over the line of sight $s$, we obtain the differential photon flux per unit solid angle and energy:
+
+\begin{equation} \label{Annihilation}
+    \frac{d\Phi_\gamma}{d\Omega dE} (\theta) = \frac{1}{2} \frac{r_\odot}{4\pi} \left( \frac{\rho_\odot}{m_{\mathrm{DM}}} \right)^2 J_{\mathrm{ann}}(\theta) \sum_f \langle \sigma v \rangle_f \frac{dN_{f\to\gamma}}{dE},
+\end{equation}
+
+where in the particular case of the Milky Way
+
+\begin{equation}
+    J_{\mathrm{ann}} (\theta) = \int_{l.o.s} \frac{ds}{r_\odot} \left( \frac{\rho_{\mathrm{DM}}(r(s, \theta))}{\rho_\odot} \right)^2
+\end{equation}
+
+is the annihilation $J$-factor, $r_\odot \simeq 8.33$~kpc is the distance from the Earth to the Galactic Center, $\rho_\odot \simeq 0.4~\text{GeV/cm}^3$ is the local DM energy density, and $s$ is related to $r$ through $r = \sqrt{r_\odot^{2} + s^{2} - 2\,r_\odot\, s \cos\theta}\, $.
+
+Note that a similar treatment for DM decay leads to
+
+\begin{equation} \label{Decay}
+\frac{d\Phi_\gamma}{d\Omega\, dE} (\theta)
+=
+\frac{r_\odot}{4\pi}
+\left(\frac{\rho_\odot}{m_{\mathrm{DM}}}\right)
+J_{\mathrm{dec}}(\theta)
+\sum_{f}\Gamma_f\,
+\frac{dN_{f\to\gamma}}{dE}\,,
+\end{equation}
+
+where
+
+\begin{equation} 
+J_{\mathrm{dec}} (\theta)
+=
+\int_{l.o.s} \frac{ds}{r_\odot}
+\left(\frac{\rho_{\mathrm{DM}}(r(s, \theta))}{\rho_\odot}\right)\,
+\label{eq:Jdec}
+\end{equation}
+
+is the $J$-factor for decay and $\Gamma_f$ is the decay rate in the channel $f$. As expected, we obtain a linear dependence on the dark matter density.
+
+
+
+
+
+
+
+
+
+
+\chapter{Phase-space calculations for the adiabatic spike}
+\label{app:spike}
+
+In this appendix we report all the explicit derivations used in the study of the DM spike.
+
+\section{The density as an integral over energy and angular momentum}
+\label{app:densityEL}
+
+In a spherically symmetric system it is useful to decompose the
+velocity into its radial $v_r$ and tangential $v_t$ components. 
+In cylindrical coordinates, recalling once more the invariance of $f$ under rotations,
+the volume element is $d^3v = 2\pi\, v_t\, dv_t\, dv_r$, where we already integrated over the azimuthal angle.
+The density becomes
+
+\begin{equation} \label{density_velocities}
+\rho'(r) = \int f'\, d^3v = 2\pi \int f'\, v_t\, dv_t\, dv_r .
+\end{equation}
+
+We now change variables again from $(v_r, v_t)$ to $(E', L')$, defined by
+
+\begin{equation}
+E' = \phi'(r) + \frac{v_r^2 + v_t^2}{2},
+\qquad
+L' = r\, v_t ,
+\end{equation}
+
+where $\phi'$ is the gravitational potential and the primes indicate that these quantities are evaluated after the formation of the black hole.
+
+At fixed $r$, the Jacobian is
+
+\begin{equation}
+\frac{\partial(E', L')}{\partial(v_r, v_t)}
+=
+\det
+\begin{pmatrix}
+v_r & v_t \\
+0 & r
+\end{pmatrix}
+= r\, v_r
+\qquad\Longrightarrow\qquad
+dv_r\, dv_t = \frac{dE'\, dL'}{r\, v_r} .
+\end{equation}
+
+Now we notice that this change of coordinates is not injective: 
+to a given $(E',L')$ there correspond two velocities: the
+orbit crosses the radius $r$ once moving outward ($v_r > 0$) and once moving
+inward ($v_r < 0$), with the same $|v_r|$.
+Hence we have to account for both by multiplying the integral by a factor of two
+
+\begin{equation}
+\rho'(r)
+=
+2 \times 2\pi \int \frac{L'}{r}\, \frac{dE'\, dL'}{r\, v_r}\, f'(E',L')
+=
+\int dE' \int dL'\, \frac{4\pi L'}{r^2 v_r}\, f'(E',L') .
+\end{equation}
+
+The integration limits follow from the
+requirements that the orbit is bound ($E' < 0$), that it is not captured by
+the BH ($L' > L'_c$), and that $v_r^2 \ge 0$ ($L' < L'_m$).
+
+
+
+
+\section{Potential of the power-law halo}
+\label{app:powerlawpot}
+
+For the density profile
+
+\begin{equation}
+    \rho(r) = \rho_s \left( \frac{r}{r_s} \right)^{-\gamma},
+    \qquad 0 \le \gamma < 2,
+\end{equation}
+
+the enclosed mass is
+
+\begin{equation} \label{eq:enclosedmass}
+M_h(r) = \int_0^r 4\pi r'^2 \rho(r')\, dr'
+= \frac{4\pi \rho_s r_s^{\gamma}}{3-\gamma}\, r^{3-\gamma},
+\end{equation}
+
+
+which converges at the center for $\gamma < 3$.
+
+We now recall Poisson's equation for a spherically symmetric system
+
+\begin{equation}
+\nabla^2 \phi = \frac{1}{r^2}\frac{d}{dr}\!\left( r^2 \frac{d\phi}{dr} \right) 
+= 4\pi G\, \rho(r).
+\end{equation}
+
+Integrating this equation we obtain Newton's theorem
+
+\begin{equation}
+r^2 \frac{d\phi}{dr} = \int_0^r 4\pi G\, \rho(r')\, r'^2\, dr' = G\, M_h(r)
+\qquad\Longrightarrow\qquad
+\frac{d\phi}{dr} = \frac{G\, M_h(r)}{r^2}.
+\end{equation}
+
+Now, substituting $M_h(r)$ from \cref{eq:enclosedmass} and integrating once more, 
+with the boundary condition $\phi(0)=0$, we derive the potential
+
+
+\begin{equation} \label{eq:app_potential}
+\phi(r) = \frac{4\pi G \rho_s r_s^{\gamma}}{3-\gamma}\int_0^r r'^{\,1-\gamma}\, dr'
+= \phi_0 \left( \frac{r}{r_s} \right)^{2-\gamma},
+\qquad
+\phi_0 = \frac{4\pi G \rho_s r_s^{2}}{(3-\gamma)(2-\gamma)} .
+\end{equation}
+
+Note that the last integral, $\int_0^r r'^{\,1-\gamma}\, dr' = r^{2-\gamma}/(2-\gamma)$, converges only for 
+$\gamma < 2$. Therefore the condition at the origin $\phi(0)=0$ is admissible.
+
+Another important consideration is that, although derived here for the single power law,
+this result has a wider validity: for any spherically symmetric density profile with inner slope $\gamma$,
+the potential has the same central behavior, determined by the enclosed mass.
+
+
+
+
+\section{Eddington's inversion formula}
+\label{app:eddington}
+
+We want now to obtain the phase-space distribution as a function of the density profile $\rho$,
+the opposite of what we did in appendix~\ref{app:densityEL}.
+
+We start again from the density as an integral over velocity space, 
+$\rho = \int f\, d^3v$.
+Now we have an isotropic distribution $f(E)$, i.e. $f$ depends only on the energy,
+so the volume element in spherical coordinates reduces to $d^3v = 4\pi\, v^2\, dv$. 
+Changing variables through $E = \phi(r) + v^2/2$, the density becomes
+
+\begin{equation}
+\rho = 4\pi \int_0^{\infty} f(E)\, v^2\, dv
+= 4\pi\sqrt{2} \int_{\phi}^{\infty} f(E)\, \sqrt{E - \phi}\; dE ,
+\label{eq:app_rhof}
+\end{equation}
+
+where we used $v = \sqrt{2(E-\phi)}$ and $v^2 dv = \sqrt{2}\sqrt{E-\phi}\, dE$.
+
+Since both $\rho$ and $\phi$ are functions of $r$, and $\phi(r)$ is monotonic 
+in the region of interest, we can regard
+$\rho$ as a function of $\phi$ and differentiate both sides with respect to $\phi$
+
+\begin{equation}
+\frac{d\rho}{d\phi}
+= -2\sqrt{2}\,\pi \int_{\phi}^{\infty} \frac{f(E)}{\sqrt{E-\phi}}\; dE .
+\label{eq:app_abel}
+\end{equation}
+
+\Cref{eq:app_abel} is an Abel integral equation for $f$.
+
+To invert it, we multiply by
+$(\phi - \mathcal{E})^{-1/2}$, with $\mathcal{E}$ as a new fixed parameter, and integrate over $\phi$ from $\mathcal{E}$ to
+infinity, exchanging the order of integration:
+\begin{equation} \label{rho_eddington}
+\int_{\mathcal{E}}^{\infty} \frac{d\rho}{d\phi}\,
+\frac{d\phi}{\sqrt{\phi-\mathcal{E}}}
+= -2\sqrt{2}\,\pi \int_{\mathcal{E}}^{\infty} dE\, f(E)
+\int_{\mathcal{E}}^{E} \frac{d\phi}{\sqrt{(\phi-\mathcal{E})(E-\phi)}} .
+\end{equation}
+
+The inner integral
+
+\begin{equation}
+\int_{\mathcal{E}}^{E} \frac{d\phi}{\sqrt{(\phi-\mathcal{E})(E-\phi)}} 
+\end{equation}
+
+is a standard integral, independent of both $\mathcal{E}$ and $E$, which can be 
+solved explicitly with the substitution $\phi = \mathcal{E} + (E-\mathcal{E})\sin^2\theta$
+and becomes
+
+\begin{equation}
+    2\int_0^{\pi/2} d\theta = \pi.
+\end{equation}
+
+Now, substituting this value in \cref{rho_eddington}
+
+\begin{equation}
+\int_{\mathcal{E}}^{\infty} \frac{d\rho}{d\phi}\,
+\frac{d\phi}{\sqrt{\phi-\mathcal{E}}}
+= -2\sqrt{2}\,\pi^2 \int_{\mathcal{E}}^{\infty} f(E)\, dE ,
+\end{equation}
+
+and differentiating with respect to $\mathcal{E}$ we obtain Eddington's
+formula 
+
+\begin{equation}
+f(E)
+= \frac{1}{\sqrt{8}\,\pi^2}\,
+\frac{d}{dE} \int_{E}^{\infty} \frac{d\rho}{d\phi}\,
+\frac{d\phi}{\sqrt{\phi-E}} .
+\label{eq:app_eddington}
+\end{equation}
+
+
+
+\section{Radial actions}
+\label{app:actions}
+
+
+\subsection*{Power-law potential}
+
+For the initial potential
+
+\begin{equation}
+    \phi(r) = \phi_0 \left( \frac{r}{r_s} \right)^{2-\gamma}
+\end{equation}
+
+the action integral cannot be performed in closed form for generic $\gamma$, 
+so we will study its scaling with $E$.
+
+We can obtain the orbit $r_E$ by $\phi(r_E) = E$:
+
+\begin{equation}
+    r_E = r_s \left( \frac{E}{\phi_0} \right)^{\frac{1}{2-\gamma}}.
+\end{equation}
+
+Recalling the radial action expression in \cref{radialaction}
+and rescaling $r = r_E\, x$ we obtain
+
+\begin{equation}
+I(E,L)
+= 2 \int_{r_-}^{r_+} \sqrt{2E - 2\phi(r) - \frac{L^2}{r^2}}\; dr
+= 2\sqrt{2E}\; r_E \int_{x_-}^{x_+}
+\sqrt{1 - x^{2-\gamma} - \frac{\lambda^2}{x^2}}\; dx ,
+\end{equation}
+
+where $\lambda^2 = \frac{L^2}{2E\, r_E^2}$ is dimensionless.
+
+Hence
+
+\begin{equation}
+I(E,L) = 2\sqrt{2E}\; r_E \; F(\lambda)
+\;\propto\; E^{\frac{1}{2} + \frac{1}{2-\gamma}}
+= E^{\frac{4-\gamma}{2(2-\gamma)}}
+\end{equation}
+at fixed $\lambda$. 
+
+
+
+
+\subsection*{Point-mass potential}
+
+The final potential is the point-mass
+
+\begin{equation}
+    \phi'(r) = -\frac{GM_{\mathrm{BH}}}{r},
+\end{equation}
+
+so the radial velocity becomes
+
+\begin{equation}
+v_r^2 = 2E' + \frac{2GM_{\mathrm{BH}}}{r} - \frac{L'^2}{r^2}
+= \frac{2|E'|}{r^2} \left( r_+ - r \right)\left( r - r_- \right),
+\end{equation}
+
+where $r_\pm$ are the turning points, with
+
+\begin{equation}
+r_+ + r_- = \frac{GM_{\mathrm{BH}}}{|E'|},
+\qquad
+r_+ r_- = \frac{L'^2}{2|E'|} .
+\end{equation}
+
+The radial action is therefore
+
+\begin{equation}
+I' = 2 \int_{r_-}^{r_+} v_r\, dr
+= 2\sqrt{2|E'|} \int_{r_-}^{r_+}
+\frac{\sqrt{(r_+ - r)(r - r_-)}}{r}\; dr .
+\end{equation}
+
+The definite integral is a standard one and can be evaluated with the
+substitution $r = r_+ \sin^2\theta + r_- \cos^2\theta$:
+
+\begin{equation}
+\int_{r_-}^{r_+} \frac{\sqrt{(r_+-r)(r-r_-)}}{r}\, dr
+= \frac{\pi}{2}\left( r_+ + r_- \right) - \pi \sqrt{r_+ r_-} ,
+\end{equation}
+
+so that
+
+\begin{equation}
+I' = 2\sqrt{2|E'|} \left[ \frac{\pi}{2}\frac{GM_{\mathrm{BH}}}{|E'|}
+- \pi \frac{L'}{\sqrt{2|E'|}} \right]
+= 2\pi \left( -L' + \frac{GM_{\mathrm{BH}}}{\sqrt{-2E'}} \right) .
+\end{equation}
+
+Note that the action vanishes for circular orbits, for which
+$L' = \frac{GM_{\mathrm{BH}}}{\sqrt{-2E'}}$ is the maximum angular momentum at fixed energy.
+
+
+
+
+\section{Velocity integral for the spike density}
+\label{app:spikevelocity}
+
+
+We saw that in the region dominated by the black hole the potential is
+
+\begin{equation}
+    \phi'(r) \simeq -GM_{\mathrm{BH}}/r,
+\end{equation}
+
+and bound particles have 
+
+\begin{equation}
+E' = -\frac{GM_{\mathrm{BH}}}{r} + \frac{v^2}{2},
+\qquad
+0 \le v \le v_{\mathrm{esc}} = \sqrt{\frac{2GM_{\mathrm{BH}}}{r}} .
+\end{equation}
+
+The final distribution function, obtained from adiabatic invariance considerations, scales as
+
+\begin{equation}
+    f'(E') \propto (-E')^{\,n\frac{2-\gamma}{4-\gamma}}.
+\end{equation}
+
+So, the density is given by the integral over velocity space
+
+\begin{equation}
+\rho'(r)
+= 4\pi \int_0^{v_{\mathrm{esc}}} f'(E')\, v^2\, dv
+\;\propto\;
+\int_0^{v_{\mathrm{esc}}}
+\left( \frac{GM_{\mathrm{BH}}}{r} - \frac{v^2}{2} \right)^{\! m} v^2\, dv .
+\end{equation}
+
+
+With the substitution $v = v_{\mathrm{esc}}\, u$, $u \in [0,1]$, we can
+factor out all the dependence on $r$
+
+\begin{equation}
+\rho'(r)
+\;\propto\;
+\left( \frac{GM_{\mathrm{BH}}}{r} \right)^{n\frac{2-\gamma}{4-\gamma}}
+v_{\mathrm{esc}}^{3}
+\int_0^1 \left(1-u^2\right)^{n\frac{2-\gamma}{4-\gamma}} u^2\, du
+\;\propto\;
+\left( \frac{GM_{\mathrm{BH}}}{r} \right)^{n\frac{2-\gamma}{4-\gamma}+\frac{3}{2}}
+\;\propto\;
+r^{-\left(\frac{3}{2} + n\frac{2-\gamma}{4-\gamma}\right)} ,
+\end{equation}
+
+where the integral in $u$ is a finite constant independent of $r$, in particular we notice that
+
+\begin{equation}
+\int_0^1 \left(1-u^2\right)^{n\frac{2-\gamma}{4-\gamma}} u^2\, du
+= \frac{1}{2}\int_0^1 t^{1/2}\,(1-t)^{n\frac{2-\gamma}{4-\gamma}}\, dt
+= \frac{1}{2}\,
+B\!\left(\frac{3}{2},\; n\,\frac{2-\gamma}{4-\gamma}+1\right),
+\end{equation}
+
+where $B$ is Euler's Beta function, whose definition will be better discussed in appendix~\ref{app:fGS}.
+
+We therefore obtain
+\begin{equation}
+\rho'(r) \propto r^{-\gamma_{\mathrm{sp}}},
+\qquad
+\gamma_{\mathrm{sp}} = \frac{3}{2} + n\,\frac{2-\gamma}{4-\gamma} .
+\end{equation}
+
+
+
+
+
+
+\section{Distribution function of the power-law halo}
+\label{app:fGS}
+
+
+For the power law halo 
+
+\begin{equation} \label{eq:app_exactpowerlaw}
+   \rho(r) = \rho_s \left( \frac{r}{r_s} \right)^{-\gamma},
+    \qquad 0<\gamma<2,
+\end{equation}
+
+it is possible to evaluate Eddington's formula exactly.
+
+We recall Eddington's formula of \cref{eq:app_eddington}
+
+\begin{equation} \label{eq:app_exacteddington}
+f(E)
+= \frac{1}{\sqrt{8}\,\pi^2}\,
+\frac{d}{dE} \int_{E}^{\infty} \frac{d\rho}{d\phi}\,
+\frac{d\phi}{\sqrt{\phi-E}},
+\end{equation}
+
+and the potential of \cref{eq:app_potential}, which is exact for the considered density profile,
+
+\begin{equation} \label{eq:app_exactpotential}
+\phi(r) = \frac{4\pi G \rho_s r_s^{\gamma}}{3-\gamma}\int_0^r r'^{\,1-\gamma}\, dr'
+= \phi_0 \left( \frac{r}{r_s} \right)^{2-\gamma},
+\qquad
+\phi_0 = \frac{4\pi G \rho_s r_s^{2}}{(3-\gamma)(2-\gamma)} .
+\end{equation}
+
+Combining \cref{eq:app_exactpowerlaw} with \cref{eq:app_exactpotential} we can eliminate the radius
+
+\begin{equation}
+\rho(\phi) = \rho_s \left( \frac{\phi}{\phi_0} \right)^{-p},
+\qquad
+p \equiv \frac{\gamma}{2-\gamma},
+\qquad
+\frac{d\rho}{d\phi} = -\frac{p\,\rho_s}{\phi_0}
+\left( \frac{\phi}{\phi_0} \right)^{-p-1} .
+\end{equation}
+
+Now the integral in \cref{eq:app_exacteddington} can be computed with the
+substitution $\phi = E/x$, $x \in (0,1]$:
+
+\begin{equation} \label{beta}
+\int_{E}^{\infty} \phi^{-p-1}\, (\phi-E)^{-1/2}\, d\phi
+= E^{-p-1/2} \int_0^1 x^{\,p-1/2} (1-x)^{-1/2}\, dx
+= E^{-p-1/2}\, B\!\left(p+\tfrac12, \tfrac12\right),
+\end{equation}
+
+where $B$ is Euler's Beta function, defined for $a,b > 0$ as
+
+\begin{equation}
+B(a,b) = \int_0^1 x^{\,a-1}(1-x)^{\,b-1}\, dx
+= \frac{\Gamma(a)\,\Gamma(b)}{\Gamma(a+b)},
+\end{equation}
+
+with $\Gamma$ Euler's Gamma function,
+
+\begin{equation} \label{eq:app_gammadef}
+\Gamma(z) = \int_0^{\infty} t^{\,z-1} e^{-t}\, dt ,
+\qquad z > 0 .
+\end{equation}
+
+The convergence of the integral in \cref{beta} is guaranteed
+because $p + \tfrac12 > 0$, since $p = \frac{\gamma}{2-\gamma} > 0$ for $0 < \gamma < 2$.
+
+Taking the derivative with respect to $E$, we obtain
+
+\begin{equation}
+f(E)
+= \frac{\rho_s\, \phi_0^{\,p}}{\sqrt{8}\,\pi^2}\;
+p \left(p+\tfrac12\right) B\!\left(p+\tfrac12,\tfrac12\right)
+E^{-p-3/2} ,
+\end{equation}
+
+so that $f(E) \propto E^{-n}$ with
+\begin{equation}
+n = p + \frac{3}{2} = \frac{6-\gamma}{2(2-\gamma)} .
+\end{equation}
+
+The coefficient can be simplified using the properties of Euler's Beta and Gamma functions:
+
+\begin{equation} \label{eq:app_gammaprop}
+\Gamma(z+1) = z\,\Gamma(z),
+\qquad
+\Gamma\!\left(\tfrac12\right) = \sqrt{\pi} ,
+\end{equation}
+
+and in our particular case
+
+\begin{equation}
+B\!\left(p+\tfrac12,\tfrac12\right)
+= \sqrt{\pi}\,\frac{\Gamma\!\left(p+\tfrac12\right)}{\Gamma(p+1)} ,
+\end{equation}
+
+together with the identities
+
+\begin{equation}
+\left(p+\tfrac12\right)\Gamma\!\left(p+\tfrac12\right)
+= \Gamma\!\left(p+\tfrac32\right) = \Gamma(n),
+\qquad
+\frac{p}{\Gamma(p+1)} = \frac{1}{\Gamma(p)} = \frac{1}{\Gamma\!\left(n-\tfrac32\right)} .
+\end{equation}
+
+Finally we obtain the Gondolo--Silk distribution function
+
+\begin{equation}
+f(E)
+= \frac{\rho_s}{(2\pi\phi_0)^{3/2}}\,
+\frac{\Gamma(n)}{\Gamma\!\left(n-\tfrac32\right)}
+\left( \frac{\phi_0}{E} \right)^{n} .
+\end{equation}
+
+
+
+
+
+\section{Scaling of the singular terms in Eddington's formula}
+\label{app:nkscaling}
+
+We recall the expansion of Eddington's integral of \cref{eq:eddexp}
+
+
+\begin{equation} \label{eq:app_eddexp}
+f(E)
+\sim
+\int_{r_\star}^{R} \frac{dr}{r^{3}}\,
+\frac{c_0 + c_1 (r/r_s)^{\alpha} + c_2 (r/r_s)^{2\alpha} + \dots}
+{\sqrt{\, r^{2-\gamma} - E \,}},
+\end{equation}
+
+where the lower limit $r_\star = E^{1/(2-\gamma)}$ is the radius at which
+$\phi(r_\star) = E$, while $R$ is an arbitrary upper radius, of the order
+of the scale radius of the halo.
+We set $\phi_0 = r_s = 1$, since we
+are only interested in the scaling with $E$.
+
+
+A term $\propto r^{k}$ in the numerator gives the contribution
+
+
+\begin{equation} \label{eq:app_Ik}
+I_k(E) = \int_{r_\star}^{R}
+\frac{r^{\,k-3}}{\sqrt{r^{2-\gamma} - E}}\, dr .
+\end{equation}
+
+Rescaling $r = r_\star x$ and using $r_\star^{2-\gamma} = E$, so that
+$r^{2-\gamma} - E = E\,(x^{2-\gamma}-1)$, we obtain
+
+\begin{equation} \label{eq:app_nk}
+I_k(E) = r_\star^{\,k-2}\, E^{-1/2}
+\int_1^{R/r_\star} \frac{x^{\,k-3}\, dx}{\sqrt{x^{2-\gamma}-1}}
+\;\propto\; E^{\frac{k-2}{2-\gamma} - \frac{1}{2}}
+= E^{-n_k},
+\qquad
+n_k = \frac{6-\gamma-2k}{2(2-\gamma)} ,
+\end{equation}
+
+then the scaling is all in the prefactor, provided that the dimensionless integral in $x$ tends to a finite constant as
+$E \to 0^{+}$. We therefore examine its two endpoints.
+
+At the lower endpoint the integrand is singular, but integrably, so
+expanding $x^{2-\gamma}-1 \simeq (2-\gamma)(x-1)$ for $x \to 1^{+}$, it
+behaves as $(x-1)^{-1/2}$ and never produces a divergence of $f(E)$.
+
+At the upper endpoint, where $E \to 0^{+}$ implies $R/r_\star \to \infty$,
+the integrand behaves as $x^{\,k-3-(2-\gamma)/2}$, so the integral
+converges if and only if
+
+\begin{equation} \label{eq:app_conv}
+k - 3 - \frac{2-\gamma}{2} < -1
+\quad \Longleftrightarrow \quad
+n_k > 0 ,
+\end{equation}
+
+i.e.\ the condition of convergence at large $x$ is precisely the condition
+that the exponent $n_k$ be positive.
+Instead, when $n_k \le 0$, the
+integral is dominated by large radii and $I_k$
+contributes only to the regular part
+of $f(E)$, as discussed in \cref{sec:gamma0}.
+
+
+For $k = 0$ one recovers $n_0 = \frac{6-\gamma}{2(2-\gamma)}$, in agreement with the exact result of
+Gondolo and Silk.
+For a cored profile, with $\gamma = 0$ and $k = \alpha$, one obtains $n_\alpha = \frac{3-\alpha}{2}$, 
+which is the case analysed in Ref.~\cite{Ullio_2001}.
+For the non-singular isothermal
+profile, with $\gamma = 0$ and $\alpha = 2$, both $c_0$ and $c_1$ vanish
+and the first surviving term has $k = 2\alpha = 4$, for which
+$n_4 = -1/2 < 0$: no term of the expansion produces a divergence, hence
+$f(E)$ is regular and $n = 0$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\chapter{Saturation density from dark matter annihilation}
+\label{app:saturation}
+
+The density
+growth in the innermost region of the DM spike is depleted because DM annihilates efficiently
+on account of very high DM density. The evolution of the density due to annihilation is
+
+\begin{equation}
+    \frac{\partial \rho}{\partial t} = -\frac{\langle\sigma v\rangle}{m_{\mathrm{DM}}}\,\rho^2,
+    \label{eq:app_evolution}
+\end{equation}
+
+where $m_{\mathrm{DM}}$ is the DM mass and $\langle\sigma v\rangle$ is the cross section.
+
+\Cref{eq:app_evolution} is a separable first-order differential equation, so writing it as
+
+\begin{equation}
+    \frac{d\rho}{\rho^2} = -\frac{\langle\sigma v\rangle}{m_{\mathrm{DM}}}\, dt,
+\end{equation}
+
+and integrating from the initial density $\rho_i$ at the time of
+black hole formation up to the density $\rho$ at a later time $t$
+
+\begin{equation}
+    \int_{\rho_i}^{\rho} \frac{d\rho'}{\rho'^2}
+    = -\frac{\langle\sigma v\rangle}{m_{\mathrm{DM}}}\int_0^t dt',
+\end{equation}
+
+we obtain 
+
+\begin{equation}
+    \frac{1}{\rho} = \frac{1}{\rho_i} + \frac{\langle\sigma v\rangle}{m_{\mathrm{DM}}}\, t.
+    \label{eq:app_solution}
+\end{equation}
+
+Considering a very large initial density we can neglect the term $1/\rho_i$ and the equation becomes
+
+\begin{equation} \label{DMdensity-time}
+    \rho(t) \simeq \frac{m_{\mathrm{DM}}}{\langle\sigma v\rangle\, t}.
+\end{equation}
+
+Finally, we obtain the saturation density evaluating \cref{DMdensity-time} at the age of the black hole $t = t_{\mathrm{BH}}$, conservatively $10^{10}$ yr,
+the maximum time over which annihilation has been acting,
+
+\begin{equation}
+    \rho_{\mathrm{core}} = \frac{m_{\mathrm{DM}}}{\langle\sigma v\rangle\, t_{\mathrm{BH}}}.
+\end{equation}
+
+$\rho_{\mathrm{core}}$ can be obtained also as the density at which the
+characteristic annihilation timescale
+$t_{\mathrm{ann}} \sim m_{\mathrm{DM}}/(\langle\sigma v\rangle\,\rho)$ becomes comparable to
+$t_{\mathrm{BH}}$.
