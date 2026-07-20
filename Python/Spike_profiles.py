@@ -17,9 +17,7 @@ plt.rcParams.update({
 })
 
 
-# ============================================================
 # Costanti fisiche e parametri del problema
-# ============================================================
 
 r_sun = 8330.0               # pc
 rho_sun = 0.4                # GeV / cm^3
@@ -51,9 +49,7 @@ t_BH = 1.0e10 * 3.1557e7     # s
 rho_core = m_DM / (sigmav * t_BH)    # GeV/cm^3
 
 
-# ============================================================
 # Profili di densità (spike non saturate, <sigma v> -> 0)
-# ============================================================
 
 def rho_nfw(r):
     """
@@ -133,9 +129,7 @@ def density_profile(profile, halo, r):
     return np.where(r < r_cut, 0.0, out)
 
 
-# ============================================================
 # Due figure separate: alone NFW e cored
-# ============================================================
 
 r = np.logspace(-7.0, 3.0, 4000)   # pc
 

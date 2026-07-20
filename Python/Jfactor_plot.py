@@ -19,9 +19,7 @@ plt.rcParams.update({
 })
 
 
-# ============================================================
 # Costanti fisiche e condizioni del fit (come J-factor.py)
-# ============================================================
 
 r_sun = 8.33                 # kpc
 rho_sun = 0.4                # GeV / cm^3
@@ -36,11 +34,9 @@ GeV_g = 1.78266192e-24
 mass_conversion = kpc_to_cm**3 * GeV_g / M_sun_g
 
 
-# ============================================================
 # Profili di densita' adimensionali (forme funzionali PPPC)
 #
 # rho(r) = rho_s * shape(r / r_s)
-# ============================================================
 
 def density_shape(profile, x):
     """
@@ -75,10 +71,8 @@ def density(profile, r, rho_s, rs):
     return rho_s * density_shape(profile, r / rs)
 
 
-# ============================================================
 # Fit di rho_s e r_s con le due condizioni:
 # rho(r_sun) = rho_sun e M(<60 kpc) = M_target
-# ============================================================
 
 def mass_enclosed(profile, R, rho_s, rs):
 
@@ -121,7 +115,6 @@ def solve_rhos_rs(profile):
     return 10.0**solution.x[0], 10.0**solution.x[1]
 
 
-# ============================================================
 # J-factor adimensionale lungo la linea di vista:
 #
 # J(theta) = int ds / r_sun * [rho(r(s,theta)) / rho_sun]^2
@@ -132,7 +125,6 @@ def solve_rhos_rs(profile):
 # le leggi di potenza fino ad angoli piccolissimi.
 # Per theta > 90 deg il minimo di r e' in s = 0 e l'integrale
 # in s e' regolare.
-# ============================================================
 
 def J_los(profile, psi, rho_s, rs, s_max=300.0):
 
@@ -172,9 +164,7 @@ def J_los(profile, psi, rho_s, rs, s_max=300.0):
     return integral
 
 
-# ============================================================
 # Figura: pannello principale (0-180 deg) e inset log-log
-# ============================================================
 
 profiles = [
     ("moore",    "Moore",    "#2CA02C"),

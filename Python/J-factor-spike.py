@@ -9,9 +9,7 @@ from numpy.polynomial.legendre import leggauss
 pixel_side_deg = 0.1
 
 
-# ============================================================
 # Costanti fisiche e parametri del problema
-# ============================================================
 
 r_sun = 8.33                 # kpc
 rho_sun = 0.4                # GeV / cm^3
@@ -58,9 +56,7 @@ rho_core = m_DM / (sigmav * t_BH)    # GeV/cm^3
 pixel_half = np.deg2rad(pixel_side_deg) / 2.0
 
 
-# ============================================================
 # Profili dell'alone e fit di rho_s e r_s
-# ============================================================
 
 def rho_nfw(r, rho_s, rs):
     """
@@ -156,13 +152,11 @@ def solve_rhos_rs():
     return rho_s, rs
 
 
-# ============================================================
 # Profili della spike
 #
 # La pendenza di Gondolo-Silk dipende da quella dell'alone
 # vicino al BH: gamma = 1 per la NFW, gamma = gamma_c per il
 # profilo cored.
-# ============================================================
 
 def gamma_sp_gs(halo):
     """
@@ -201,9 +195,7 @@ def rho_spike(profile, halo, r, rho_s, rs):
         raise ValueError("Profilo non riconosciuto.")
 
 
-# ============================================================
 # J-factor dell'alone lungo la linea di vista
-# ============================================================
 
 def J_los_dimensionless(halo, psi, rho_s, rs, s_max=300.0):
     """
@@ -289,7 +281,6 @@ def J_halo(halo, rho_s, rs, n=64):
     return rho_sun**2 * r_sun * kpc_to_cm * angular_integral
 
 
-# ============================================================
 # Contributo della spike
 #
 # La spike (R_sp ~ 0.3 pc) è molto più piccola della regione
@@ -300,7 +291,6 @@ def J_halo(halo, rho_s, rs, n=64):
 #
 # La sottrazione di rho_halo^2 evita il doppio conteggio
 # dell'alone entro R_sp.
-# ============================================================
 
 def J_spike(profile, halo, rho_s, rs, saturated=False):
     """
@@ -340,9 +330,7 @@ def J_spike(profile, halo, rho_s, rs, saturated=False):
     return integral * kpc3_to_cm3 / (r_sun * kpc_to_cm)**2
 
 
-# ============================================================
 # Esecuzione
-# ============================================================
 
 rho_s, rs = solve_rhos_rs()
 

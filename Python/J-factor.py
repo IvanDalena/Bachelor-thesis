@@ -4,9 +4,7 @@ from scipy.optimize import root
 from numpy.polynomial.legendre import leggauss
 
 
-# ============================================================
 # Costanti fisiche e parametri del problema
-# ============================================================
 
 r_sun = 8.33                 # kpc
 rho_sun = 0.4                # GeV / cm^3
@@ -28,11 +26,9 @@ kpc3_to_cm3 = kpc_to_cm**3
 mass_conversion = kpc3_to_cm3 * GeV_to_Msun
 
 
-# ============================================================
 # Profili di densità adimensionali
 #
 # rho(r) = rho_s * shape(r, r_s)
-# ============================================================
 
 def density_shape(profile, r, rs, rc=None):
     """
@@ -84,9 +80,7 @@ def density(profile, r, rho_s, rs, rc=None):
     return rho_s * density_shape(profile, r, rs, rc)
 
 
-# ============================================================
 # Massa entro R
-# ============================================================
 
 def mass_enclosed(profile, R, rho_s, rs, rc=None):
     """
@@ -114,9 +108,7 @@ def mass_enclosed(profile, R, rho_s, rs, rc=None):
     return integral * mass_conversion
 
 
-# ============================================================
 # Fit di rho_s e r_s
-# ============================================================
 
 def solve_rhos_rs(profile, rc=None):
     """
@@ -155,9 +147,7 @@ def solve_rhos_rs(profile, rc=None):
     return rho_s, rs
 
 
-# ============================================================
 # Geometria della linea di vista
-# ============================================================
 
 def galactocentric_radius(s, psi):
     """
@@ -175,9 +165,7 @@ def galactocentric_radius(s, psi):
     )
 
 
-# ============================================================
 # Integrale lungo la linea di vista
-# ============================================================
 
 def J_los_dimensionless(profile, psi, rho_s, rs, rc=None, s_max=300.0):
     """
@@ -221,11 +209,9 @@ def J_los_dimensionless(profile, psi, rho_s, rs, rc=None, s_max=300.0):
     return integral
 
 
-# ============================================================
 # Integrazione sulla regione angolare
 #
 # Omega_obs = Omega(theta < 1 deg, |b| > 0.3 deg)
-# ============================================================
 
 def integrated_J_factor(profile, rc=None, n_b=36, n_l=36):
     """
@@ -302,9 +288,7 @@ def integrated_J_factor(profile, rc=None, n_b=36, n_l=36):
     return np.log10(J_phys), rho_s, rs
 
 
-# ============================================================
 # Esecuzione
-# ============================================================
 
 profiles = [
     ("Einasto", "einasto", None),

@@ -19,9 +19,7 @@ plt.rcParams.update({
 })
 
 
-# ============================================================
 # Costanti fisiche
-# ============================================================
 
 kpc_to_cm = 3.0856775814913673e21
 G_pc = 4.30091e-3            # pc (km/s)^2 / M_sun
@@ -45,7 +43,6 @@ gamma_c = 0.4
 r_c = 1.0                    # kpc
 
 
-# ============================================================
 # Set di parametri NFW
 #
 # Ogni analisi usa una propria normalizzazione dell'alone:
@@ -59,7 +56,6 @@ r_c = 1.0                    # kpc
 # rho_s in GeV/cm^3, r_s e r_sun in kpc, M_BH in M_sun.
 # Dove il paper quota rho_sun invece di rho_s, rho_s e' fissato
 # da rho_nfw(r_sun) = rho_sun.
-# ============================================================
 
 def rho_s_from_local(rho_sun, r_sun, rs):
     x = r_sun / rs
@@ -100,9 +96,7 @@ def spike_radii(M_BH):
     return R_sp, r_cut
 
 
-# ============================================================
 # Profili di densita' (come in J-factor-spike.py)
-# ============================================================
 
 def rho_nfw(r, p):
     x = np.maximum(r, 1e-300) / p["rs"]
@@ -169,10 +163,8 @@ def rho_spike(profile, halo, r, p):
         raise ValueError("Profilo non riconosciuto.")
 
 
-# ============================================================
 # J-factor lungo la linea di vista (sostituzione r = b cosh u,
 # come in J-factor-spike.py)
-# ============================================================
 
 def J_los(halo, psi, p, s_max=300.0):
     """
@@ -214,12 +206,10 @@ def J_los(halo, psi, p, s_max=300.0):
     return branch(r_near) + branch(r_far)
 
 
-# ============================================================
 # J-factor sul pixel 0.1 x 0.1 deg intorno a Sgr A*, come in
 # Balaji et al. (2303.12107): il pixel centrale dei dati H.E.S.S.
 # del Galactic Centre (Fig. 3 di 1603.07730). Coordinate
 # galattiche l, b in [-side/2, +side/2].
-# ============================================================
 
 def J_pixel(halo, p, side_deg=0.1, n=64):
 
@@ -277,10 +267,8 @@ def J_spike(profile, halo, p, saturated=True):
     return integral * kpc3_to_cm3 / (p["r_sun"] * kpc_to_cm)**2
 
 
-# ============================================================
 # J-factor sulla regione dell'Inner Galaxy Survey:
 # 0.5 deg < theta < 3 deg, |b| > 0.3 deg
-# ============================================================
 
 def J_igs(halo, p, n_b=40, n_l=40):
 
@@ -329,7 +317,6 @@ def J_igs(halo, p, n_b=40, n_l=40):
     return angular_integral * kpc_to_cm
 
 
-# ============================================================
 # Curve digitalizzate
 #
 # hess_igs_nfw_ww.csv   : limite NFW, H.E.S.S. IGS (2207.10471,
@@ -338,7 +325,6 @@ def J_igs(halo, p, n_b=40, n_l=40):
 #                         Fig. 3), massa in GeV
 # sgrA_spike_lsh_ww.csv : limite NFW+LSH, Sgr A* (2303.12107,
 #                         Fig. 3), massa in GeV
-# ============================================================
 
 data_dir = Path(__file__).resolve().parent / "data"
 
@@ -372,7 +358,6 @@ def load_curve(name, mass_unit_GeV=False):
     return m, sv
 
 
-# ============================================================
 # Fattori di rescaling
 #
 # Il limite scala come 1/J, quindi il limite riferito al nostro
@@ -382,7 +367,6 @@ def load_curve(name, mass_unit_GeV=False):
 #
 # con i J calcolati sulla regione di osservazione di ciascuna
 # analisi.
-# ============================================================
 
 print()
 print("J-factor sulla regione IGS (0.5-3 deg, |b| > 0.3 deg)")
@@ -424,9 +408,7 @@ print(f"k_gs  = {k_gs:.3f}")
 print(f"k_lsh = {k_lsh:.3f}")
 
 
-# ============================================================
 # Curve riscalate
-# ============================================================
 
 m_nfw, sv_nfw = load_curve("hess_igs_nfw_ww.csv")
 m_gs, sv_gs = load_curve("sgrA_spike_gs_ww.csv", mass_unit_GeV=True)
@@ -442,9 +424,7 @@ print(f"Minimo del limite NFW riscalato: "
       f"{sv_nfw.min():.2e} cm^3/s a m = {m_nfw[np.argmin(sv_nfw)]:.2f} TeV")
 
 
-# ============================================================
 # Figura capitolo 1: NFW + cored + relic
-# ============================================================
 
 images_dir = Path(__file__).resolve().parent.parent / "Latex" / "images"
 
@@ -469,9 +449,7 @@ fig.savefig(images_dir / "Sigmav_limits.png", dpi=300)
 print(f"Figura salvata in {images_dir / 'Sigmav_limits.png'}")
 
 
-# ============================================================
 # Figura capitolo 2: NFW + GS + LSH + relic
-# ============================================================
 
 fig, ax = plt.subplots(figsize=(8.0, 5.5))
 
