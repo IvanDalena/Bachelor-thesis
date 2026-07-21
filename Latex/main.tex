@@ -24,17 +24,8 @@
 \fancyhead[R]{\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
 \usepackage{emptypage}
-\newcommand{\blankpage}{
-    \newpage
-    \thispagestyle{empty}
-    \mbox{}
-    \newpage
-}
 \usepackage{cleveref}
 \setlength{\headheight}{14.5pt}
-
-
-
 
 
 \usepackage{csquotes}
@@ -52,16 +43,12 @@
 
 \DefineBibliographyStrings{english}{andothers = {et~al.}}
 
-% Titolo articolo in TONDO, giornale resta in CORSIVO — differenziano i due
-\DeclareFieldFormat[article]{title}{#1}
-\DeclareFieldFormat[inproceedings]{title}{#1}
-
 \renewcommand*{\newunitpunct}{\addcomma\space}
 
 % Soppressioni
-\AtEveryBibitem{\clearfield{issn}}
-\AtEveryBibitem{\ifentrytype{online}{\clearfield{note}}{}}
 \AtEveryBibitem{%
+  \clearfield{issn}%
+  \ifentrytype{online}{\clearfield{note}}{}%
   \ifentrytype{article}{%
     \clearfield{month}\clearfield{day}\clearfield{number}\clearfield{issue}%
   }{}%
@@ -71,11 +58,10 @@
 \renewbibmacro{in:}{}
 \DeclareFieldFormat{pages}{#1}
 
+% Titoli in corsivo
+\DeclareFieldFormat[article,misc,inproceedings]{title}{\mkbibemph{#1}}
 
-\DeclareFieldFormat[article]{title}{\mkbibemph{#1}}
-\DeclareFieldFormat[misc]{title}{\mkbibemph{#1}}
-\DeclareFieldFormat[inproceedings]{title}{\mkbibemph{#1}}
-
+% Rivista/atti: tondo e cliccabili sul DOI
 \DeclareFieldFormat{journaltitle}{%
   \iffieldundef{doi}
     {#1}
@@ -100,15 +86,10 @@
 }
 
 % Solo arXiv esplicito, DOI è già nel titolo rivista
-\renewbibmacro*{doi+eprint+url}{%
-  \iffieldundef{eprint}{}{\usebibmacro{eprint}}%
-}
+\renewbibmacro*{doi+eprint+url}{\usebibmacro{eprint}}
 
 % Online: titolo corsivo e cliccabile
 \DeclareFieldFormat[online]{title}{\href{\thefield{url}}{\mkbibemph{#1}}}
-
-
-
 
 
 
@@ -117,31 +98,21 @@
 
 \begin{document}
 
-
-
 \pagenumbering{gobble}
 \include{titlepage}
 \cleardoublepage
-
-
 
 \pagenumbering{roman}
 \pagestyle{plain}
 \include{abstract}
 \cleardoublepage
 
-
-
 %Indice
 \tableofcontents
 \cleardoublepage
 
-
-
 \pagenumbering{arabic}
 \pagestyle{fancy}
-
-
 
 \include{introduction}
 
@@ -160,8 +131,5 @@
 \phantomsection
 \addcontentsline{toc}{chapter}{Bibliography}
 \printbibliography
-
-
-
 
 \end{document}
