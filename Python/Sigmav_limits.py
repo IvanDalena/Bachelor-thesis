@@ -317,22 +317,27 @@ def J_igs(halo, p, n_b=40, n_l=40):
     return angular_integral * kpc_to_cm
 
 
-# Curve digitalizzate
+# Curve digitalizzate (massa in TeV)
 #
-# hess_igs_nfw_ww.csv   : limite NFW, H.E.S.S. IGS (2207.10471,
-#                         Fig. 2), massa in TeV
-# sgrA_spike_gs_ww.csv  : limite NFW+GS, Sgr A* (2303.12107,
-#                         Fig. 3), massa in GeV
-# sgrA_spike_lsh_ww.csv : limite NFW+LSH, Sgr A* (2303.12107,
-#                         Fig. 3), massa in GeV
+# hess_igs_nfw_ww.csv   : limite NFW, H.E.S.S. IGS (2207.10471, Fig. 2)
+# sgrA_spike_gs_ww.csv  : limite NFW+GS, Sgr A* (2303.12107, Fig. 3,
+#                         pannello in alto a sinistra, curva blu continua)
+# sgrA_spike_lsh_ww.csv : limite NFW+LSH, Sgr A* (2303.12107, Fig. 3,
+#                         pannello in alto a sinistra, curva viola continua)
+#
+# Le due curve di spike sono quelle a rho_sun = 0.383 GeV/cm^3 (continue,
+# blu per GS e viola per LSH); le tratteggiate dello stesso pannello sono a
+# rho_sun = 0.55 e non vanno usate qui. Gli assi del pannello vanno da
+# 3.2e2 a 1e5 GeV e da 1e-32 a 1e-22 cm^3/s: le curve concordano entro il
+# 2% con i dati vettoriali del file NFW+spikeWW.pdf del sorgente arXiv.
 
 data_dir = Path(__file__).resolve().parent / "data"
 
 
-def load_curve(name, mass_unit_GeV=False):
+def load_curve(name):
     """
     Legge un CSV di WebPlotDigitizer (separatore ';', virgola
-    decimale), ordina per massa e la converte in TeV.
+    decimale) e lo ordina per massa crescente.
     """
 
     rows = []
@@ -350,12 +355,8 @@ def load_curve(name, mass_unit_GeV=False):
     m, sv = np.array(rows).T
 
     order = np.argsort(m)
-    m, sv = m[order], sv[order]
 
-    if mass_unit_GeV:
-        m = m * 1e-3
-
-    return m, sv
+    return m[order], sv[order]
 
 
 # Fattori di rescaling
@@ -411,8 +412,8 @@ print(f"k_lsh = {k_lsh:.3f}")
 # Curve riscalate
 
 m_nfw, sv_nfw = load_curve("hess_igs_nfw_ww.csv")
-m_gs, sv_gs = load_curve("sgrA_spike_gs_ww.csv", mass_unit_GeV=True)
-m_lsh, sv_lsh = load_curve("sgrA_spike_lsh_ww.csv", mass_unit_GeV=True)
+m_gs, sv_gs = load_curve("sgrA_spike_gs_ww.csv")
+m_lsh, sv_lsh = load_curve("sgrA_spike_lsh_ww.csv")
 
 sv_nfw = sv_nfw * k_nfw
 sv_cored = sv_nfw * k_cored
@@ -460,8 +461,8 @@ ax.loglog(m_lsh, sv_lsh, color="#D55E00", lw=2.0, label="NFW + LSH spike")
 ax.axhline(sigmav_relic, color="0.35", ls="--", lw=1.4,
            label=r"$\langle\sigma v\rangle_{\mathrm{relic}}$")
 
-ax.set_xlim(0.2, 1e3)
-ax.set_ylim(1e-30, 1e-21)
+ax.set_xlim(0.2, 1e2)
+ax.set_ylim(1e-32, 1e-22)
 ax.set_xlabel(r"$m_{\mathrm{DM}}\ \,[\mathrm{TeV}]$", fontsize=12)
 ax.set_ylabel(r"$\langle\sigma v\rangle\ \,[\mathrm{cm^3\,s^{-1}}]$",
               fontsize=12)

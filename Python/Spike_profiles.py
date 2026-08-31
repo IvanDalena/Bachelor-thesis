@@ -183,4 +183,69 @@ for halo, title, filename in panels:
 
     print(f"Figura salvata in {output_path}")
 
+
+# Figura unica: NFW (linea continua) e cored (tratteggiata) sovrapposti.
+# Stesso colore per lo stesso caso (no spike / GS / LSH) e stile di linea
+# diverso per i due aloni, cosi' il confronto tra i due e' immediato.
+
+from matplotlib.lines import Line2D
+
+fig, ax = plt.subplots(figsize=(6.8, 5.6))
+
+halo_styles = [
+    ("nfw", "-"),
+    ("cored", "--"),
+]
+
+for halo, ls in halo_styles:
+
+    ax.loglog(r, rho_halo(halo, r), color="0.45", lw=1.8, ls=ls)
+
+    for profile, color in [("gs", "#0072B2"), ("lsh", "#D55E00")]:
+        rho = density_profile(profile, halo, r)
+        ax.loglog(r, np.where(rho > 0.0, rho, np.nan),
+                  color=color, lw=2.0, ls=ls)
+
+# Densita' di saturazione e raggi caratteristici (uguali per i due aloni).
+# Rese puntinate cosi' si distinguono dalle curve tratteggiate del cored.
+ax.axhline(rho_core, color="0.55", ls=":", lw=1.0)
+ax.text(2.5e-7, 3.6e11, r"$\rho_{\mathrm{core}}$", color="0.35", fontsize=10)
+
+for xline, xlabel in [(R_sp, r"$R_{\mathrm{sp}}$"),
+                      (r_b, r"$r_b$"),
+                      (r_cut, r"$4R_S$")]:
+    ax.axvline(xline, color="0.7", ls=":", lw=0.9)
+    ax.text(1.3 * xline, 3e-2, xlabel, color="0.35", fontsize=10)
+
+ax.set_xlim(1e-7, 1e3)
+ax.set_ylim(1e-2, 1e18)
+ax.set_xlabel(r"$r\ \,[\mathrm{pc}]$", fontsize=12)
+ax.set_ylabel(r"$\rho\ \,[\mathrm{GeV\,cm^{-3}}]$", fontsize=12)
+
+# Doppia legenda: il colore identifica il caso, lo stile di linea l'alone.
+color_handles = [
+    Line2D([0], [0], color="0.45", lw=1.8, label="no spike"),
+    Line2D([0], [0], color="#0072B2", lw=2.0, label="GS spike"),
+    Line2D([0], [0], color="#D55E00", lw=2.0, label="LSH spike"),
+]
+style_handles = [
+    Line2D([0], [0], color="black", lw=1.8, ls="-", label="NFW halo"),
+    Line2D([0], [0], color="black", lw=1.8, ls="--",
+           label=r"cored halo ($\gamma_c = 0.4$, $r_c = 1$ kpc)"),
+]
+
+leg_color = ax.legend(handles=color_handles, frameon=False, fontsize=10,
+                      loc="upper right", bbox_to_anchor=(1.0, 1.0))
+ax.add_artist(leg_color)
+ax.legend(handles=style_handles, frameon=False, fontsize=10,
+          loc="upper right", bbox_to_anchor=(1.0, 0.80))
+
+fig.tight_layout()
+
+output_path = images_dir / "Spike_profiles.png"
+fig.savefig(output_path, dpi=300)
+plt.close(fig)
+
+print(f"Figura unita salvata in {output_path}")
+
 print(f"rho_core = {rho_core:.3e} GeV/cm^3")

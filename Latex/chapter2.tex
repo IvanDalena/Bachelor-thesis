@@ -1,21 +1,21 @@
 \chapter{Dark matter constraints from the Galactic Center}
 
-The Galactic Center is expected to be the single brightest source of dark matter annihilation products on the sky. In particular, using a standard NFW profile, shown in \cref{NFW}, with $r_s = 20$
-kpc and a local density of $0.4~\text{GeV/cm}^3$ \cite{hooper2018tasi}, from \cref{eq:AnnihilationFlux_general} we obtain a flux of gamma rays that is more than three orders of magnitude larger than that predicted
-from the brightest dwarf galaxies.
+The Galactic Center is expected to be the single brightest source of DM annihilation products on the sky. In particular, using a standard NFW profile, shown in \cref{NFW}, with $r_s = 20$
+kpc and a local density of $0.4~\text{GeV/cm}^3$, from \cref{eq:AnnihilationFlux_general} we obtain a flux of gamma rays that is more than three orders of magnitude larger than that predicted
+from the brightest dwarf galaxies \cite{hooper2018tasi}.
 However, the mass within the innermost kpc of the Milky Way is dominated by baryons, 
 this leads to a higher astrophysical background and, most importantly, numerical simulations need to include hydrodynamics
 and feedback physics in addition to the gravitational effects, resulting in uncertainties in the obtained DM profiles towards the GC.
-These simulations agree that the DM profile of MW-like galaxies develops a peak towards the Galactic Center but their resolution prevents them from determining a well-defined dark matter distribution.
+These simulations agree that the DM profile of MW-like galaxies develops a peak towards the Galactic Center but their resolution prevents them from determining a well-defined DM distribution.
 
 Therefore, in this chapter we define a set of representative DM density profiles, determine their parameters from observational constraints and compute their $J$-factors.
-Then, we introduce a simple model of thermal relic DM and confront it with the upper limits on the annihilation cross section obtained by the H.E.S.S. Inner Galaxy Survey,
+Then, we introduce a simple model of thermal relic DM and confront it with the upper limits on the annihilation cross section obtained by the H.E.S.S. Inner Galaxy Survey~\cite{Abdalla_2022},
 showing how different profiles lead to different constraints.
 
 
 \section{Dark matter density profiles and $J$-factors} \label{GC}
 
-As long as a clearer determination of the DM profile in the inner Milky Way regions is not achieved, it is worth considering a range of possible choices and compare them. 
+As long as a clearer determination of the DM profile in the inner Milky Way regions is not achieved, it is worth considering a range of possible choices and comparing them. 
 In particular, the two limiting cases are: a peaked profile, in which the density keeps rising steeply towards the GC, and a cored one, in which the density flattens to a finite central value. 
 Therefore, in what follows we consider the Einasto (peaked) \cite{Einasto1965}, Burkert (cored) \cite{Burkert1995} 
 and NFW \cite{NFW1996,NFW1997} with a variable core radius $r_c$ as representative DM density profiles 
@@ -32,7 +32,6 @@ For the Einasto profile the functional form reads
 -\frac{2}{\alpha}\left(\left(\frac{r}{r_s}\right)^{\alpha}-1\right)
 \right],
 \end{equation}
-
 where $\alpha = 0.17$ is a shape parameter that controls how the logarithmic slope of the density varies with the radius. Note that the Einasto profile does not diverge for small radii, 
 nevertheless, in the region of our analysis it behaves as a peaked profile.
 
@@ -44,7 +43,6 @@ The Burkert profile is
 =
 \frac{\rho_s}{\left(1+\dfrac{r}{r_s}\right)\left(1+\left(\dfrac{r}{r_s}\right)^2\right)},
 \end{equation}
-
 which flattens to $\rho_s$ at small radii, defining a core of size $\sim r_s$.
  
 
@@ -63,7 +61,7 @@ The functional form of the cored NFW is
 \end{equation}
 
 Once $r_c$ is fixed, all three profiles depend on two free parameters, $\rho_s$ and $r_s$.
-We determine them by fitting the DM density at the Sun's position: $\rho(r_\odot = 8.33~\text{kpc}) = 0.4~\text{GeV/cm}^3$, and the total DM mass within 60~kpc: $M(<60~\text{kpc}) = 4.7 \times 10^{11}\,M_\odot$.
+We determine them by fitting the DM density at the Sun's position: $\rho(r_\odot = 8.33~\text{kpc}) = 0.4~\text{GeV/cm}^3$~\cite{Read_2014}, and the total DM mass within 60~kpc: $M(<60~\text{kpc}) = 4.7 \times 10^{11}\,M_\odot$~\cite{Lefranc_2016}.
 For the NFW profile these conditions yield $r_s \simeq 14.0$~kpc and
 $\rho_s \simeq 0.60~\mathrm{GeV/cm^3}$, these values will be adopted throughout this work.
 
@@ -77,12 +75,11 @@ We integrate the $J$-factors over an angular region, centered on the GC, defined
 \label{eq:Omega_obs}
     \Omega_\mathrm{obs} = \Omega(\theta < 1^\circ,\; |b| > 0.3^\circ),
 \end{equation}
-
 where $\theta > 0^\circ$ is the polar angle with respect to the GC direction 
 and $b$ is the galactic latitude with respect to the disk plane. At the Sun's 
 distance $r_\odot = 8.33$~kpc, the angles $1^\circ$ and $0.3^\circ$ correspond 
 to projected distances of approximately 145~pc and 44~pc from the GC, respectively. 
-The choice of $|b| > 0.3^\circ$ is motivated by the need to mask the large photon backgrounds from the galactic ridge.
+The $|b| > 0.3^\circ$ cut is motivated by the choice of~\cite{Abdalla_2022} to mask the large photon backgrounds from the galactic ridge.
 The results are reported in \cref{tab:gc_jfactors}, where we use three illustrative values of $r_c$ for the cored NFW.
 
 
@@ -127,9 +124,10 @@ This is the reason why small regions close to the GC are particularly interestin
 
 
 \section{Thermal relic cross section and indirect detection constraints}
+\label{sec:relic_constraints}
 
 
-We now consider the model where two DM particles annihilate into two BSM mediators, i.e. particles that are not SM, 
+We now consider the model where two DM particles $\chi$ annihilate into two BSM mediators $\phi$, i.e.\ particles that are not SM, 
 
 \begin{equation}
     \chi\chi \to \phi\phi .
@@ -140,7 +138,7 @@ The mediators are then assumed to later decay into SM particles.
 In the following calculation we use natural units, where \(\hbar=c=1\), masses and energies are expressed in GeV and cross sections in $\mathrm{GeV}^{-2}$. 
 
 
-The annihilation cross section for the process \(\chi\chi\to\phi\phi\) is
+The annihilation cross section for the process \(\chi\chi\to\phi\phi\) is~\cite{cirelli2025darkmatter}
 
 \begin{equation}
 \label{eq:sigmav_dark_sector}
@@ -148,12 +146,17 @@ The annihilation cross section for the process \(\chi\chi\to\phi\phi\) is
 =
 \frac{\pi\alpha_D^2}{m_{\mathrm{DM}}^2},
 \end{equation}
+where \(m_{\mathrm{DM}}\) is the DM mass and \(\alpha_D\) is the coupling constant of
+the dark sector, defined as
 
-where \(m_{\mathrm{DM}}\) is the DM mass and \(\alpha_D\) is the coupling constant of 
-the dark sector.
+\begin{equation}
+\label{eq:alphaD_def}
+\alpha_D = \frac{g_D^2}{4\pi},
+\end{equation}
+with \(g_D\) the coupling between the BSM mediators and DM.
 
 Assuming the thermal relic scenario, the observed DM abundance is obtained for an annihilation cross section of order \(10^{-26}\,\mathrm{cm^3/s}\).
-For a quantitative analysis, we use the value for self-conjugate dark matter with mass greater than 10 GeV \cite{Steigman_2012}
+For a quantitative analysis, we use the value for self-conjugate DM with mass greater than 10 GeV \cite{Steigman_2012}
 
 \begin{equation}
   \langle\sigma v\rangle =  2.2\times10^{-26}~\mathrm{cm^3/s}
@@ -191,19 +194,52 @@ For simplicity, we use the limit for DM annihilating directly into the $W^{+}W^{
 
 This is a good approximation because, as discussed in \cref{Gammarays}, the $\gamma$-ray spectrum from $W$ 
 hadronization is a broad continuum: the extra step through the mediators halves the average energy of each $W$ and 
-doubles their multiplicity, but this mildly affects the spectrum. The resulting limits agree with the 
-direct-channel ones up to $\mathcal{O}(1)$ factors.
+doubles their multiplicity, but this mildly affects the spectrum.
 
-Ref.~\cite{Abdalla_2022} provides 95\% confidence level (C.L.) upper limits on the annihilation cross section $\langle\sigma v\rangle_{\mathrm{lim}}(m_{\mathrm{DM}})$ as a function of the DM mass. 
+
+To constrain our model, in what follows we employ the experimental upper limits
+on the DM annihilation cross section obtained by the H.E.S.S. experiment.
+The High Energy Stereoscopic System (H.E.S.S.) is an array of Imaging
+Atmospheric Cherenkov Telescopes located in the Khomas Highland of Namibia,
+sensitive to very-high-energy $\gamma$-rays from a few tens of GeV to several
+tens of TeV~\cite{Hinton2004}. 
+It does not detect the $\gamma$-rays directly:
+when a very-high-energy photon enters the atmosphere it initiates an
+electromagnetic cascade of secondary particles that travel faster than the
+speed of light in air and therefore emit a faint, nanosecond-long flash of
+Cherenkov light. 
+Each telescope records an image of this flash, and 
+the combination of the images taken simultaneously, 
+a technique known as stereoscopy,
+allows the arrival direction and the energy 
+of the primary photon to be reconstructed with high accuracy.
+In this way the instrument effectively
+measures the $\gamma$-ray flux and energy spectrum coming from a given region
+of the sky, which is precisely the observable that can be compared with the
+signal predicted from DM annihilation.
+The performance of the array, in terms
+of angular and energy resolution and sensitivity, was established through the
+observation of the Crab Nebula, the standard candle of very-high-energy
+$\gamma$-ray astronomy~\cite{Aharonian_2006_HESS}.
+Owing to its location in the
+southern hemisphere, H.E.S.S. observes the Galactic Center at small zenith
+angles, close to the optimal observing conditions, which makes it one of the
+leading instruments for indirect DM searches at the TeV scale.
+
+
+
+
+In particular, Ref.~\cite{Abdalla_2022} provides 95\% confidence level (C.L.) upper limits on the annihilation cross section $\langle\sigma v\rangle_{\mathrm{lim}}(m_{\mathrm{DM}})$ as a function of the DM mass. 
 H.E.S.S. adopts an NFW profile with $\rho_\odot = 0.39~\mathrm{GeV/cm^3}$ at $r_\odot = 8.5$~kpc and $r_s = 21$~kpc, while we adopt the parameters determined in \cref{GC}: $\rho_\odot = 0.4~\mathrm{GeV/cm^3}$ at $r_\odot = 8.33$~kpc and $r_s \simeq 14.0$~kpc.
 We can adjust these limits using our parameters by rescaling them with the ratio of the $J$-factors for the two sets of parameters, 
 both computed over the region of observation of the Inner Galaxy Survey,
 $0.5^\circ < \theta < 3^\circ$ with $|b| > 0.3^\circ$, which in this case
 gives $J^{\mathrm{H.E.S.S.}}/J^{\mathrm{our}} \simeq 0.60$.
 
-Since the expected gamma-ray flux is proportional to 
-$\langle\sigma v\rangle J$, a cored NFW profile, having a smaller central DM 
-density and hence a smaller $J$-factor, leads to a weaker limit:
+Since the expected gamma-ray flux is proportional to
+$\langle\sigma v\rangle J$, a cored NFW profile, having a smaller central DM
+density and hence a smaller $J$-factor, leads to a weaker limit. Rescaling the
+NFW limit by the ratio of the $J$-factors, we obtain
 
 
 \begin{equation}
@@ -211,14 +247,19 @@ density and hence a smaller $J$-factor, leads to a weaker limit:
     \langle\sigma v\rangle_{\mathrm{lim}}^{\mathrm{cored}}
     \simeq
     \langle\sigma v\rangle_{\mathrm{lim}}^{\mathrm{NFW}}
-    \frac{J_{\mathrm{NFW}}}{J_{\mathrm{cored}}}
-    >
-    \langle\sigma v\rangle_{\mathrm{lim}}^{\mathrm{NFW}},
+    \frac{J_{\mathrm{NFW}}}{J_{\mathrm{cored}}},
 \end{equation}
+where $J_{\mathrm{NFW}}/J_{\mathrm{cored}} \simeq 4.0$ for a flat core of
+radius $r_c = 1$~kpc. Therefore, the limit obtained
+under the cored assumption is weaker than the one obtained under NFW,
 
 
-where $J_{\mathrm{NFW}}/J_{\mathrm{cored}} \simeq 4.0$ for a flat core of 
-radius $r_c = 1$~kpc.
+\begin{equation}
+\label{eq:cored_weaker}
+    \langle\sigma v\rangle_{\mathrm{lim}}^{\mathrm{cored}}
+    >
+    \langle\sigma v\rangle_{\mathrm{lim}}^{\mathrm{NFW}}.
+\end{equation}
 
 The resulting limits are shown in \cref{Cross_section} for the NFW and the 
 cored NFW profiles, together with the thermal relic cross section of our 
@@ -228,9 +269,9 @@ are provided for the NFW profile.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.93\textwidth]{Sigmav_limits.png}
+\includegraphics[width=\textwidth]{Sigmav_limits.png}
 \caption{\emph{95\% C.L. upper limits on the annihilation cross section in the
-$W^{+}W^{-}$ channel from the H.E.S.S. Inner Galaxy Survey, rescaled to our
+$W^{+}W^{-}$ channel from the H.E.S.S. Inner Galaxy Survey~\cite{Abdalla_2022}, rescaled to our
 halo parameters. We adopt the NFW and the cored NFW profiles. The dashed line is the cross section that reproduces the
 observed relic abundance in our model.}}
 \label{Cross_section}
@@ -248,7 +289,6 @@ $\gamma$-ray flux scales as
 \Phi \propto \frac{\langle\sigma v\rangle}{m_{\mathrm{DM}}^2}\, J
 \int_{E_{\mathrm{thr}}}^{m_{\mathrm{DM}}} \frac{dN_{f\to\gamma}}{dE}\, dE,
 \end{equation}
-
 where $E_{\mathrm{thr}}$ is the energy threshold of the telescope and the 
 spectrum extends up to $E \simeq m_{\mathrm{DM}}$.
 The upper limit $\langle\sigma v\rangle_{\mathrm{lim}}$ is inversely proportional to the

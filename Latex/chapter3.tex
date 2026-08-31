@@ -1,4 +1,4 @@
-\chapter{Spikes in dark matter density profiles}
+\chapter{Spikes in dark matter density profiles} \label{chap:spikes}
 
 
 There is strong evidence for the presence of a supermassive black hole (SMBH or simply BH), called Sgr~A*, at the center of our Galaxy.
@@ -11,12 +11,12 @@ star S2, is $M_{\mathrm{BH}} = (4.15 \pm 0.01)\times 10^6\,M_\odot$~\cite{GRAVIT
 
 
 
-If cold dark matter is present at the Galactic Center,
+If cold DM is present at the Galactic Center,
 as in current models of the dark halo, the adiabatic growth of the black hole redistributes
 it into a cusp, called a \emph{spike}.
 From \cref{eq:AnnihilationFlux_general} we have seen that the annihilation rate depends on the square of
-the dark matter density, so it is strongly increased in the spike. The absence of a detected signal then allows one to place interesting upper
-limits on the density slope of the inner halo.
+the DM density, so it is strongly increased in the spike. The absence of a detected signal then allows one to place interesting upper
+limits on the density slope of the inner halo, under the assumption of DM being a thermal relic.
 However, the determination of the DM density profile in the spike is affected by severe uncertainties.
 
 Therefore, in this chapter we study the formation of DM spikes around black holes, derive the relation between the slope of the spike and that of the DM halo, examining its physical origin and its regime of validity, and discuss the main astrophysical uncertainties affecting the spike profile. 
@@ -25,28 +25,29 @@ Finally, we compute the $J$-factors for DM annihilation around the Galactic Cent
 
 \section{Adiabatic spike around the central black hole} \label{adiabatic_spike}
 
-We want to find the dark matter density profile in the region
+We want to find the DM density profile in the region
 where the black hole dominates the gravitational
 potential. From the data in \cite{Eckart_1997,Ghez_1998}, Gondolo and Silk \cite{Gondolo_1999} estimated this region to be of the order of a parsec.
 
 
 We work under the assumption that the growth of the
 black hole is adiabatic: this means that the black hole grows on a time scale much longer
-than the typical orbital time of the dark matter particles in the central
+than the typical orbital time of the DM particles in the central
 region. This assumption is supported by
-the collisionless behavior of particle dark matter, discussed in \cref{properties}.
+the collisionless behavior of particle DM, discussed in \cref{properties}.
 
-In order to determine the DM density profile after the formation of the black hole, it is useful to describe the system in terms of the phase-space distribution $f(\mathbf{x}, \mathbf{v})$, recalling the relation
+In order to determine the DM density profile after the formation of the black hole, it is useful to describe the system in terms of the phase-space distribution $f(\mathbf{x}, \mathbf{v})$, defined as the DM mass per unit phase-space volume, recalling the relation
 
 \begin{equation}
 \rho(\mathbf{x})
 =
 \int f(\mathbf{x}, \mathbf{v}) \, d^3 v,
 \end{equation}
-
 which means that the density at a point is obtained by integrating
-the number of particles
-per unit phase-space volume over all velocities.
+the DM mass per unit phase-space volume over all velocities.
+With this convention $\rho$ is the mass density, in $\mathrm{GeV/cm^3}$, and the
+corresponding number density is $\rho / m_{\mathrm{DM}}$.
+
 
 For a spherically symmetric system we can express the phase-space distribution as a function of the energy $E$ and the angular momentum $L$ of the particles. While the density profile gives information about the amount of DM at a given position, $f(E,L)$ contains additional information on the orbital
 structure of the system.
@@ -63,7 +64,6 @@ $f'(E',L')$ over all the bound orbits that pass through a radius $r$
 \frac{4\pi L'}{r^2 v_r}\,
 f'(E',L') ,
 \end{equation}
-
 where $E'$ and $L'$ are respectively the final energy and angular momentum per
 unit mass, and
 
@@ -76,7 +76,6 @@ E' + \frac{GM_{\mathrm{BH}}}{r} - \frac{L'^2}{2r^2}
 \right)
 \right]^{1/2}
 \end{equation}
-
 is the radial velocity. 
 The derivation of this expression is reported in appendix~\ref{app:densityEL}.
 
@@ -118,7 +117,6 @@ the orbital periods, the radial action
 \begin{equation} \label{radialaction}
 I(E,L) = \oint v_r \, dr = 2\int_{r_-}^{r_+} v_r \, dr,
 \end{equation}
-
 where $r_\pm$ are the turning points of the orbit, is also conserved. This is a classical result on adiabatic invariants, see e.g. \cite{BinneyTremaine2008}.
 The conservation of the phase-space density along the orbits follows from Liouville's theorem.
 Finally, we have
@@ -127,7 +125,7 @@ Finally, we have
 f'(E',L') = f(E,L), \qquad L' = L, \qquad I'(E',L') = I(E,L).
 \end{equation}
 
-This means that the growth of the black hole does not create dark matter particles, it only modifies their orbits, increasing their density in the central region and forming a spike. 
+This means that the growth of the black hole does not create DM particles, it only modifies their orbits, increasing their density in the central region and forming a spike. 
 
 
 
@@ -152,11 +150,10 @@ We assume an initial self-gravitating DM distribution
 \rho(r) = \rho_s \left( \frac{r}{r_s} \right)^{-\gamma},
 \qquad 0<\gamma<2,
 \end{equation}
-
 made of particles that are all on circular orbits, at the center
 of which a black hole grows adiabatically.
 Note that here, and throughout this section, we neglect the gravitational effect of the baryonic components and 
-consider only that of dark matter and black hole. 
+consider only that of DM and black hole. 
 We consider the more realistic scenario in which baryonic components are included in \cref{less_stellar_heating}.
 
 The enclosed mass and 
@@ -169,7 +166,7 @@ M(r_i) \propto r_i^{\,3-\gamma}, \qquad L_i^{2} = G\, M(r_i)\, r_i \propto r_i^{
 
 After the growth of the black hole, the mass enclosed within the final radius $r_f$ is dominated by the BH at small radii: $M_f(r_f) \simeq M_{\mathrm{BH}}$ as $r_f \to 0$, 
 so $L_f^{2} = G M_{\mathrm{BH}}\, r_f$.
-Since the black hole exerts no torque on any dark matter
+Since the black hole exerts no torque on any DM
 particle, the angular momentum is conserved ($L_i = L_f$) and we obtain the relation
 
 \begin{equation} \label{eq:toymap}
@@ -189,7 +186,6 @@ We can obtain the final density profile from the conservation of mass shell by s
 \begin{equation}
     \rho_f(r_f)\, r_f^{2}\, dr_f = \rho_i(r_i)\, r_i^{2}\, dr_i
 \end{equation}
-
 and writing $\rho_f \propto r_f^{-\gamma_{\mathrm{sp}}}$ we get
 
 \begin{equation}
@@ -207,12 +203,12 @@ Now, using \cref{eq:toymap}, we obtain the final slope of the spike for our toy 
 In the following, we will obtain the same result in a more rigorous and complete way.
 
 
-\subsection{General scaling relation}
+\subsection{General scaling relation} \label{sec:generalscaling}
 
 We now consider again the adiabatic growth of the black hole and the phase-space treatment
 introduced previously.
 
-We adopt the general family of spherical double-power-law dark matter density profiles,
+We adopt the general family of spherical double-power-law DM density profiles,
 introduced by Zhao \cite{Zhao_1996},
 
 \begin{equation} \label{eq:zhao}
@@ -222,7 +218,6 @@ introduced by Zhao \cite{Zhao_1996},
 \left( \frac{r}{r_s} \right)^{-\gamma}
 \left[ 1 + \left( \frac{r}{r_s} \right)^{\alpha} \right]^{-(\beta-\gamma)/\alpha},
 \end{equation}
-
 where $\gamma$ is the inner slope, for $r \ll r_s$, $\beta$ the outer slope, for $r \gg r_s$, $r_s$ is the scale radius of the halo and $\alpha$ controls the
 sharpness of the transition between the two regimes.
 
@@ -237,7 +232,6 @@ we can obtain the functional form of the initial potential near the center from 
 \begin{equation} \label{eq:phipl}
 \phi(r) \simeq \phi_0 \left( \frac{r}{r_s} \right)^{2-\gamma},
 \end{equation}
-
 where, without loss of generality, we have fixed the value of the initial gravitational potential at the center to zero:
 $\phi(0)=0$, possible since the potential is finite at the center for $\gamma<2$.
 Note that with $\phi(0)=0$ the potential increases outward and every orbit of the
@@ -296,7 +290,6 @@ In the final potential the radial action is known exactly
 \begin{equation}
 I'(E',L') = 2\pi \left( -L' + \frac{GM_{\mathrm{BH}}}{\sqrt{-2E'}} \right),
 \end{equation}
-
 and for small radii the second term dominates so 
 $I' \propto (-E')^{-1/2}$.
 
@@ -307,7 +300,6 @@ Now applying the conservation of the radial action we obtain
 \begin{equation} \label{eq:energymap}
 E \propto (-E')^{-\frac{2-\gamma}{4-\gamma}},
 \end{equation}
-
 which is the scaling relation between initial and final energies, first
 obtained in \cite{Quinlan_1995}.
 
@@ -322,12 +314,17 @@ function in the initial state diverges near the center as
 \begin{equation} \label{eq:fdiv}
 f(E) \sim E^{-n}, \qquad E \to 0^{+},
 \end{equation}
-
 we can derive the final density profile at small radii, in the region
 where the potential is dominated by the black hole. There
 $\phi'(r) \simeq -GM_{\mathrm{BH}}/r$, and bound particles have
 $E' = -GM_{\mathrm{BH}}/r + v^2/2$ with $0 \le v \le v_{\mathrm{esc}} =
 \sqrt{2GM_{\mathrm{BH}}/r}$.
+
+Note that here we introduce $n$ only as an assumption on the behaviour of
+$f$, it is not a free parameter: in \cref{sec:GSspike} we derive it as a
+function of the problem data for a specific power-law $\rho$, and in
+\cref{sec:gamma0} for the general profile of \cref{eq:zhao} introduced above.
+
 
 The final distribution function is obtained recalling the consideration
 made in \cref{adiabatic_spike}, in particular from Liouville's theorem
@@ -335,7 +332,6 @@ made in \cref{adiabatic_spike}, in particular from Liouville's theorem
 \begin{equation}
     f'(E') = f\!\left(E(E')\right) \propto (-E')^{\,n\frac{2-\gamma}{4-\gamma}},
 \end{equation}
-
 and integrating over the velocity space (see appendix~\ref{app:spikevelocity} for
 the explicit integral)
 
@@ -348,7 +344,6 @@ f'\!\left( -\frac{GM_{\mathrm{BH}}}{r} + \frac{v^{2}}{2} \right) v^{2}\, dv
 \left( \frac{GM_{\mathrm{BH}}}{r} \right)^{\! n\frac{2-\gamma}{4-\gamma}}
 \left( \frac{GM_{\mathrm{BH}}}{r} \right)^{\! 3/2},
 \end{equation}
-
 where the first factor comes from the scaling of $f'$ and the second from the
 phase-space volume $\sim v_{\mathrm{esc}}^{3}$. We therefore obtain the
 general scaling relation
@@ -379,7 +374,6 @@ a single power law density profile (the same we examined in \cref{toymodel})
 \begin{equation}
     \rho(r) = \rho_s \left( \frac{r}{r_s} \right)^{-\gamma},
 \end{equation}
-
 which is the general family of \cref{eq:zhao} with $\beta = \gamma$ and $0<\gamma<2$. 
 
 For this profile the initial potential of \cref{eq:phipl} is exact at all radii, so we
@@ -396,14 +390,11 @@ we have
 \qquad
 \phi_0 = \frac{4\pi G \rho_s r_s^{2}}{(3-\gamma)(2-\gamma)} .
 \end{equation}
-
 so that
 
 \begin{equation}
     \rho \propto \phi^{-\frac{\gamma}{2-\gamma}}
 \end{equation}
-
-
 and Eddington's formula of
 \cref{eq:eddington} can be evaluated exactly, the computation is reported in
 appendix~\ref{app:fGS}, giving a pure power law
@@ -427,7 +418,6 @@ Inserting this value of $n$ into \cref{eq:generalslope},
 =
 \frac{9-2\gamma}{4-\gamma},
 \end{equation}
-
 which is the famous result of Gondolo and Silk.
 
 
@@ -455,19 +445,16 @@ obtaining the complete density profile of the spike
 \qquad
 \gamma_{\mathrm{sp}} = \frac{9-2\gamma}{4-\gamma},
 \end{equation}
-
-
 where
 
 \begin{equation} \label{r_spike}
 \rho_R = \rho_s \left( \frac{R_{\mathrm{sp}}}{r_s} \right)^{-\gamma},
 \qquad
-R_{\mathrm{sp}} = \alpha_\gamma \, r_s
+R_{\mathrm{sp}} = A_\gamma \, r_s
 \left( \frac{M_{\mathrm{BH}}}{\rho_s r_s^3} \right)^{1/(3-\gamma)}.
 \end{equation}
-
 Here $\rho_R$ is the density normalization, $R_{\mathrm{sp}}$ is the radius of
-the spike, $\alpha_\gamma$ is a normalization factor and
+the spike, $A_\gamma$ is a normalization factor and
 $g_\gamma(r) \simeq (1-4R_S/r)^3$ accounts for the capture of particles by the
 black hole. Therefore, the density vanishes for $r < 4R_S$. It is important to
 note that the factor $g_\gamma(r)$ follows from the Newtonian treatment of
@@ -543,7 +530,6 @@ f(E)
 \frac{c_0 + c_1 (r/r_s)^{\alpha} + c_2 (r/r_s)^{2\alpha} + \dots}
 {\sqrt{\, r^{2-\gamma} - E \,}},
 \end{equation}
-
 where the lower limit $r_\star = E^{1/(2-\gamma)}$ is the radius at which $\phi(r_\star) = E$.
 
 Some care is needed here: the integral of \cref{eq:eddexp} is obtained from the small radius expansion of the density,
@@ -583,7 +569,6 @@ f(E) \sim E^{-n_k},
 \qquad
 n_k = \frac{6-\gamma-2k}{2(2-\gamma)},
 \end{equation}
-
 provided $n_k > 0$, otherwise the integral is dominated by large radii,
 the term gives no divergence and only
 contributes to the regular part of $f(E)$. 
@@ -611,7 +596,6 @@ n = n_0 = \frac{6-\gamma}{2(2-\gamma)},
 \qquad
 \gamma_{\mathrm{sp}} = \frac{9-2\gamma}{4-\gamma} ,
 \end{equation}
-
 recovering the result of \cite{Quinlan_1995} and Gondolo--Silk. 
 
 
@@ -637,16 +621,33 @@ isothermal profile of \cref{eq:iso}.
 \end{itemize}
 
 
-We can make some considerations about the result we derived previously: 
-the slope of the spike is a property of the dark matter profile very close to the black hole,
-at $r \ll R_{\mathrm{sp}}$, but from \cref{spike} and
+We can make some considerations about the result we derived previously:
+the slope of the spike is a property of the DM profile very close to the black hole,
+at $r \ll R_{\mathrm{sp}}$, and yet from \cref{spike} and
 \cref{eq:gamma0slope} we observe a dependence of $\gamma_{\mathrm{sp}}$ on $\gamma$ and $\alpha$, which
-control the DM profile at $r \gg R_{\mathrm{sp}}$. In particular, after the growth 
+at first sight look like parameters describing the halo very far away: after the growth
 of the BH, the initial profile inside $R_{\mathrm{sp}}$ no longer exists, having been
-replaced by the spike itself, so the slope $\gamma$ is related only to the halo; $\alpha$ describes the transition of the
+replaced by the spike itself, while $\gamma$ is the slope measured on the halo well
+outside the spike and $\alpha$ describes the transition of the
 profile around the scale radius $r_s$, which is orders of magnitude further out.
 
-The reason why this happens can be found in the derivation of the spike.
+This is, however, only an apparent paradox. In the Zhao family of \cref{eq:zhao} the
+parameter $\alpha$ plays two distinct roles: it sets the sharpness of the transition
+between the two power laws at $r \sim r_s$, but it is also the exponent of the
+leading correction to the inner power law as $r \to 0$, as we can see in \cref{eq:zhaoexp}.
+It is exclusively through this second role that $\alpha$ enters our calculation:
+via the coefficient $c_1$ of \cref{eq:coeffs} and the
+behavior of Eddington's integral at $r_\star \to 0$.
+The same holds for $\gamma$, which is
+by definition the exponent of the leading term of the same expansion.
+The spike therefore never probes
+the halo at large radii: it only probes the way in which the density approaches its
+central value, and any profile sharing the same $r \to 0$ expansion would give the same
+$\gamma_{\mathrm{sp}}$, however different its behavior at $r \gtrsim r_s$. What is really
+assumed, when $\gamma_{\mathrm{sp}}$ is quoted in terms of $(\alpha,\gamma)$, is that the
+fitted profile can be extrapolated all the way down to $r \to 0$.
+
+The mechanism behind this can be traced back to the derivation of the spike.
 
 First, the spike is formed by the initially most bound, hence coldest, particles 
 and the relation between the initial and final energy of \cref{eq:energymap} 
@@ -658,9 +659,11 @@ Second, $n$ is not fixed by the central density $\rho(0)$, nor
 by the slope of the profile at any observable radius, but is fixed by
 the leading non-constant term in the expansion of $\rho(r)$ as $r \to 0$, 
 as we show in appendix~\ref{app:nkscaling} from the analysis of Eddington's expansion.
-Ref.~\cite{Ullio_2001} presents an instructive example: the profiles
+Ref.~\cite{Ullio_2001} presents an instructive example of what we have just discussed:
+the profiles
 $\rho \propto (a+r)^{-2}$ and $\rho \propto (a^{2}+r^{2})^{-1}$, where $a$ is
-a constant, both approach a constant density at the origin, but the first has
+a constant, both approach a constant density at the origin and both fall off as
+$r^{-2}$ for $r \gg a$, and yet the first has
 $(\alpha,\beta,\gamma) = (1,2,0)$, hence $\gamma_{\mathrm{sp}} = 2$, while the
 second has $\alpha = 2$, hence $\gamma_{\mathrm{sp}} = 3/2$.
 The general criterion \cite{Quinlan_1995} is the analyticity of the density at the origin:
@@ -672,7 +675,7 @@ steeper spike.
 
 
 
-\subsection{Annihilation saturation}
+\subsection{Annihilation saturation} \label{sec:saturation}
 
 We also need to consider the DM annihilation at small radii. The growth of the DM density cannot continue indefinitely:
 in the inner regions of the spike annihilations are so efficient that they set a maximal density, called saturation density
@@ -681,7 +684,6 @@ in the inner regions of the spike annihilations are so efficient that they set a
     \rho_{\mathrm{core}} = \frac{m_{\mathrm{DM}}}{\langle\sigma v\rangle\, t_{\mathrm{BH}}},
     \label{eq:rhocore}
 \end{equation}
-
 where $m_{\mathrm{DM}}$ is the DM mass, $\langle\sigma v\rangle$ is the cross section and $t_{\mathrm{BH}}$ is the age of the black hole, conservatively $10^{10}$ yr.
 The explicit derivation is reported in appendix~\ref{app:saturation}.
 The final spike profile can be written as
@@ -690,15 +692,14 @@ The final spike profile can be written as
     \rho_{\mathrm{spike}}(r) = \frac{\rho'(r)\,\rho_{\mathrm{core}}}{\rho'(r) + \rho_{\mathrm{core}}},
     \label{eq:saturated}
 \end{equation}
-
 which behaves like $\rho'(r)$ where $\rho'(r) \ll
 \rho_{\mathrm{core}}$ and flattens to $\rho_{\mathrm{core}}$ where $\rho'(r) \gg \rho_{\mathrm{core}}$.
 The transition happens at the saturation radius $R_{\mathrm{core}}$, defined by
-the condition $\rho'(R_{\mathrm{core}}) = \rho_{\mathrm{core}}$, i.e. the radius
+the condition $\rho'(R_{\mathrm{core}}) = \rho_{\mathrm{core}}$, i.e.\ the radius
 at which the unsaturated spike reaches the saturation density.
 
 Note that flattening \cref{eq:saturated} to a constant $\rho_{\mathrm{core}}$
-is not the only possible approach: Ref.~\cite{balaji2023darkmatterspikessgr} shows that,
+is not the only possible approach: Ref.~\cite{ShapiroShelton2016} shows that,
 since particles on
 eccentric orbits cross the annihilation-dominated region only briefly,
 the density inside the saturation radius still has a residual cusp.
@@ -713,7 +714,6 @@ whose functional form reads
 \rho_{\mathrm{iso}}(r) = \frac{\rho_s}{1+\left(\dfrac{r}{r_s}\right)^{2}}\,,
 \label{eq:iso}
 \end{equation}
-
 with $r_s = 1$~kpc. This profile flattens to the constant value $\rho_s$ for $r \ll r_s$ and falls off
 as $r^{-2}$ at large radii, reproducing flat rotation curves.
 As discussed in \cref{sec:gamma0}, this is the case of $\gamma = 0$ and $\alpha = 2$, 
@@ -728,7 +728,7 @@ corresponding to $m_{\mathrm{DM}} = 1$~TeV and $\langle\sigma v\rangle = 2.2\tim
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth]{Spike_slope.png}
+\includegraphics[width=0.95\textwidth]{Spike_slope.png}
 \caption{\emph{Examples of spike density profiles for different values of the halo inner slope $\gamma$: 1.3, 1, 0.1, 0.01, and for an isothermal profile with a flat core of radius 1~kpc, following \cite{Gondolo_1999}. The halo profiles are normalized to $\rho_\odot = 0.4~\mathrm{GeV/cm^3}$ at $r_\odot = 8.33$~kpc. Both axes use a logarithmic scale to display the wide dynamic range of the profiles, from the region close to the black hole to the outer halo.}}
 \label{Spikeslope}
 \end{figure}
@@ -769,8 +769,6 @@ Given these uncertainties, we employ the following general parametrisation of th
 \end{cases}
 \label{eq:parametrisation}
 \end{equation}
-
-
 where $r$ is the distance from Sgr~A*, which we assume to be at the exact center of the MW, $\rho_{\mathrm{halo}}$ is the outer halo density and
 $\rho_{\mathrm{spike}}(r)$ is the saturated spike profile of \cref{eq:saturated}.
 
@@ -786,7 +784,6 @@ We recall the NFW profile
 \frac{\rho_s}{\dfrac{r}{r_s}\left(1+\dfrac{r}{r_s}\right)^{2}},
 \label{eq:nfw}
 \end{equation}
-
 with scale radius $r_s$ and normalization fixed by the local
 DM density through
 \begin{equation}
@@ -796,8 +793,6 @@ DM density through
 \left(\frac{r_\odot}{r_s}\right)
 \left(1+\frac{r_\odot}{r_s}\right)^2,
 \end{equation}
-
-
 where $r_\odot = 8.33\,\mathrm{kpc}$ is the distance of the Sun from the Galactic
 Center. For $\rho_\odot$ we use the same value adopted for the $J$-factors of
 \cref{tab:gc_jfactors}, which is \(\rho(r_\odot)=0.4~\mathrm{GeV/cm^3}\). The scale radius $r_s$ is fixed, as in
@@ -816,7 +811,6 @@ For the cored profile we employ the following parametrisation
 \end{cases}
 \label{eq:cored}
 \end{equation}
-
 where $r_c$ is the radius of the core and $0 \leq \gamma_c < 1$ its inner slope.
 For MW-sized galaxies, simulations allow for core radii of the order of a
 kpc, so we assume $r_c = 1$~kpc.
@@ -838,7 +832,6 @@ R_h$, where
 \begin{equation}
 R_h = \frac{G M_{\mathrm{BH}}}{v_0^{2}}
 \end{equation}
-
 is the gravitational influence radius of the BH, defined by the condition
 that the potential energy due to the BH equals the typical kinetic energy
 of a DM particle in the halo.
@@ -857,13 +850,20 @@ Adopting $M_{\mathrm{BH}} \simeq 4.15 \times 10^{6}\, M_\odot$ for Sgr~A*
 R_h \simeq 1.6~\mathrm{pc}, \qquad R_{\mathrm{sp}} \simeq 0.32~\mathrm{pc}.
 \end{equation}
 
-Note that this estimate of $R_{\mathrm{sp}}$ differs from the one of \cref{r_spike},
-obtained by Gondolo and Silk from the condition that the
-halo mass enclosed within $R_{\mathrm{sp}}$ be comparable to
-$M_{\mathrm{BH}}$. 
-Both identify the scale at which the black hole starts
-to dominate the potential, and here we adopt \cref{eq:Rsp} for consistency
-with Ref.~\cite{balaji2023darkmatterspikessgr}.
+Note that this estimate of $R_{\mathrm{sp}}$ differs substantially from the one of
+\cref{r_spike}, obtained by Gondolo and Silk from the condition that the halo mass
+enclosed within $R_{\mathrm{sp}}$ be comparable to $M_{\mathrm{BH}}$, which for the NFW
+profile of \cref{eq:nfw} is met more than an order of magnitude further out. The two
+conditions would be equivalent for a self-gravitating halo, where
+$v^{2} \sim G M_{\mathrm{halo}}(<r)/r$ and $M_{\mathrm{halo}}(<R) = M_{\mathrm{BH}}$
+is the same requirement as $R = G M_{\mathrm{BH}}/v^{2}$. They differ here because the
+potential of the inner Galaxy is dominated by the baryons: the mass criterion ignores
+them altogether, while $v_0$, inferred from the stars, is several times larger than the
+DM mass alone would produce, and $R_h \propto v_0^{-2}$. Both criteria identify the
+scale at which the black hole starts to dominate the potential, and here we adopt
+\cref{eq:Rsp} for consistency with Ref.~\cite{balaji2023darkmatterspikessgr}; it is also
+the conservative choice, since the spike density grows with $R_{\mathrm{sp}}$. We return
+to this assumption in \cref{sec:benchlimitations}.
 
 
 \subsection{Gondolo--Silk benchmark}
@@ -880,7 +880,6 @@ we obtain the Gondolo--Silk (GS) profile
 \qquad 4R_S \leq r < R_{\mathrm{sp}},
 \label{eq:gs}
 \end{equation}
-
 where $\rho_{\mathrm{halo}}$ is the NFW profile of \cref{eq:nfw} or the
 cored profile of \cref{eq:cored}, with the corresponding value of
 $\gamma_{\mathrm{sp}}$.
@@ -893,7 +892,7 @@ and not the value $9/4$ suggested by the naive limit $\gamma \to 0^{+}$ of \cref
 \subsection{Less-stellar-heating benchmark} \label{less_stellar_heating}
 
 Now we consider the gravitational effect of the baryons surrounding Sgr~A*: this interaction between DM and the baryons dampens the spike.
-The DM spike may be significantly softened due to gravitational heating by the nuclear star cluster, i.e. the stars within the inner few pc of
+The DM spike may be significantly softened due to gravitational heating by the nuclear star cluster, i.e.\ the stars within the inner few pc of
 the MW. Gnedin and Primack in \cite{GnedinPrimack2004} obtained an equilibrium spike solution of
 \begin{equation}
 \gamma_{\mathrm{sp}}^{\mathrm{heated}} = 1.5.
@@ -920,7 +919,6 @@ spike reads
 \end{cases}
 \label{eq:lh}
 \end{equation}
-
 where again $\rho_{\mathrm{halo}}$ denotes either the NFW or the cored halo,
 with $\gamma_{\mathrm{sp}} = 7/3$ and $\gamma_{\mathrm{sp}} \simeq 2.28$
 respectively.
@@ -928,14 +926,15 @@ respectively.
 
 
 
-\subsection{Limitations of the benchmarks}
+\subsection{Limitations of the benchmarks} \label{sec:benchlimitations}
 
 The benchmarks defined above encompass many of the
 uncertainties affecting the determination of spike profiles.
 However, there are other
 sources of uncertainty that they do not account for.
 
-First, we have not considered halo profiles steeper than NFW, although recent simulations do produce them. Such benchmarks would yield stronger limits, since their $J$-factors would be larger.
+First, we have not considered halo profiles steeper than NFW, although recent simulations do produce them. 
+The correspondingly steeper spikes would yield larger $J$-factors and hence a larger predicted $\gamma$-ray flux, improving the sensitivity of indirect searches for DM annihilation towards the Galactic Center.
 
 Second, we determine the spike radius $R_{\mathrm{sp}}$ through the velocity dispersion of the stars, implicitly assuming that DM and baryons are in kinetic equilibrium.
 This holds in the less-stellar-heating benchmark, but could perhaps be too conservative
@@ -955,7 +954,7 @@ throughout most
 of its formation history.
 This assumption is supported by the measured slope
 of the density of the nuclear star cluster, see e.g. \cite{GallegoCano2020}, and by the fact that the gravitational dynamics is by far dominated by baryons.
-If this were not the case, the resulting spike would be softened
+If this were not the case, the resulting spike would be softened.
 
 
 
@@ -978,6 +977,17 @@ and, specifically for the NFW profile, its signal dominates over that of the sur
 Therefore, following Ref.~\cite{balaji2023darkmatterspikessgr}, we integrate over
 the central $0.1^\circ\times 0.1^\circ$ pixel centered on Sgr~A*, so that our
 $J$-factors are directly comparable to theirs.
+As a consequence, from now on we no longer use the H.E.S.S. Inner Galaxy
+Survey limits of \cref{GC}~\cite{Abdalla_2022}, which mask the $|b|<0.3^\circ$
+region, but the limits derived in Ref.~\cite{balaji2023darkmatterspikessgr}
+over this central pixel.
+These, in turn, are obtained from the H.E.S.S.
+observations of the Galactic Center~\cite{HESS_PeVatron_2016},
+a measurement of
+the very-high-energy $\gamma$-ray flux from the central source associated with
+Sgr~A*, reinterpreted as an upper limit on a possible DM annihilation
+contribution.
+
 All the other parameters are the same used for \cref{tab:gc_jfactors}: the
 local density $\rho_\odot = 0.4~\mathrm{GeV/cm^3}$ at
 $r_\odot = 8.33$~kpc and, for the NFW halo, the scale radius
@@ -1006,7 +1016,6 @@ J_{\mathrm{sp}}
 \int_{4R_S}^{R_{\mathrm{sp}}} 4\pi r^{2}\, \rho_{\mathrm{spike}}^{2}(r) \, dr,
 \label{eq:Jspike}
 \end{equation}
-
 to be added to the line-of-sight integral of the corresponding halo over the pixel.
 Note that in the non-annihilating limit $\rho_{\mathrm{spike}}(r) \to \rho'(r)$.
 The results are reported in \cref{tab:spike_jfactors}.
@@ -1038,7 +1047,28 @@ $\langle\sigma v\rangle = 2.2\times 10^{-26}~\mathrm{cm^3/s}$ (bottom row).
 \label{tab:spike_jfactors}
 \end{table}
 
-The results obtained meet the expectations: we observe a huge enhancement for the NFW halo, up to about seven orders of magnitude, and a much milder one for the cored halo.
+In \cref{Spikeprofiles} we plot the density profiles for both halos, alone and with the two spike benchmarks.
+The spikes are shown unsaturated, as in the
+non-annihilating limit $\langle\sigma v\rangle \to 0$, nevertheless the horizontal dotted line indicates the saturation density $\rho_{\mathrm{core}}$.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Spike_profiles.png}
+\caption{\emph{DM density profiles as a function of the distance from
+Sgr~A*, alone and with the two spike benchmarks GS and LSH.
+Solid lines refer to the NFW halo and dashed lines to the cored halo
+with $\gamma_c = 0.4$ and $r_c = 1$~kpc; curves of the same color
+correspond to the same case (no spike, GS or LSH spike), so that the
+comparison between the two halos is immediate.
+The spikes are shown unsaturated, i.e.\ in the non-annihilating
+limit $\langle\sigma v\rangle \to 0$.}}
+\label{Spikeprofiles}
+\end{figure}
+
+The results obtained meet the expectations, and are evident in both
+\cref{tab:spike_jfactors} and \cref{Spikeprofiles}: we observe a huge enhancement for
+the NFW halo, up to about seven orders of magnitude, and a much milder one for the
+cored halo.
 In both cases, the GS benchmark produces a stronger enhancement than the LSH and the $J$-factors in the non-annihilating limit are larger than the ones where the saturation is included.
 The values for the halos alone are the same in both cases, since their densities
 stay below $\rho_{\mathrm{core}}$ at all radii above $4R_S$.
@@ -1048,21 +1078,17 @@ while on the same halo profile, the difference between the two benchmarks is abo
 The uncertainty on the inner halo profile therefore dominates over the
 uncertainty on the spike shape.
 
-In \cref{Spikeprofiles} we plot the density profiles for both halos, alone and with the two spike benchmarks.
-The spikes are shown unsaturated, as in the
-non-annihilating limit $\langle\sigma v\rangle \to 0$, nevertheless the horizontal dotted line indicates the saturation density $\rho_{\mathrm{core}}$.
-
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.8\textwidth]{Spike_profiles_NFW.png}\\
-\includegraphics[width=0.8\textwidth]{Spike_profiles_cored.png}
-\caption{\emph{DM density profiles as a function of the distance from
-Sgr~A*, alone and with the two spike benchmarks GS and LSH.
-Top panel: NFW halo. Bottom panel: cored halo with $\gamma_c = 0.4$ and
-$r_c = 1$~kpc. }}
-\label{Spikeprofiles}
-\end{figure}
+% Versione a due pannelli separati, sostituita dalla figura unica qui sopra:
+% \begin{figure}[H]
+% \centering
+% \includegraphics[width=0.8\textwidth]{Spike_profiles_NFW.png}\\
+% \includegraphics[width=0.8\textwidth]{Spike_profiles_cored.png}
+% \caption{\emph{DM density profiles as a function of the distance from
+% Sgr~A*, alone and with the two spike benchmarks GS and LSH.
+% Top panel: NFW halo. Bottom panel: cored halo with $\gamma_c = 0.4$ and
+% $r_c = 1$~kpc. }}
+% \label{Spikeprofiles}
+% \end{figure}
 
 
 % \begin{figure}[H]
@@ -1092,15 +1118,18 @@ Ref.~\cite{balaji2023darkmatterspikessgr} provides 95\% C.L. upper limits on
 $\langle\sigma v\rangle$ in the $W^{+}W^{-}$ channel, derived from the H.E.S.S.
 observations \cite{HESS_PeVatron_2016} of the central $0.1^\circ\times 0.1^\circ$ pixel centered on Sgr~A*, assuming an
 NFW halo with the GS and LSH spikes. The limits are provided for DM masses
-$m_{\mathrm{DM}} \gtrsim 3$~TeV. 
+$m_{\mathrm{DM}} \gtrsim 0.3$~TeV.
 
 As done in the previous chapter, we adapt these limits to our halo parameters.
 Ref.~\cite{balaji2023darkmatterspikessgr} adopts
 $\rho_\odot = 0.383~\mathrm{GeV/cm^3}$ at $r_\odot = 8.2$~kpc, $r_s = 18.6$~kpc
 and $M_{\mathrm{BH}} = 4.3\times 10^{6}\,M_\odot$, and we rescale the limits
 with the ratio of the $J$-factors computed for the two sets of parameters over
-the same region of observation, we obtain $J^{\mathrm{ref}}/J^{\mathrm{our}} \simeq 0.78$
-for the GS benchmark and $\simeq 0.75$ for the LSH one.
+the same region of observation. We use the saturated $J$-factors of
+\cref{tab:spike_jfactors}, i.e.\ those obtained for $m_{\mathrm{DM}} = 1$~TeV and
+$\langle\sigma v\rangle = 2.2\times 10^{-26}~\mathrm{cm^3/s}$. We obtain
+$J^{\mathrm{ref}}/J^{\mathrm{our}} \simeq 0.78$ for the GS benchmark and
+$\simeq 0.75$ for the LSH one.
 
 Note that for spiked profiles the limits are not exactly proportional to
 $1/J$, since the saturation density $\rho_{\mathrm{core}}$, and hence the
@@ -1114,23 +1143,12 @@ Ref.~\cite{balaji2023darkmatterspikessgr}.
 The resulting limits are shown in \cref{Sigmav_spike}, together with the
 no-spike NFW limit from \cref{Cross_section} and the
 thermal relic cross section of our model.
+All the curves in \cref{Sigmav_spike} refer to the peaked NFW halo of
+\cref{eq:nfw}, combined with the GS and LSH spikes of \cref{sec:benchmarks}.
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.92\textwidth]{Sigmav_limits_spike.png}
-\caption{\emph{95\% C.L. upper limits on the annihilation cross section in the
-$W^{+}W^{-}$ channel, rescaled to our halo parameters. The GS and LSH curves
-are the limits of Ref.~\cite{balaji2023darkmatterspikessgr} from the H.E.S.S.
-observations of Sgr~A* for the NFW halo with the two
-benchmark spikes. The NFW curve without spike is the one of
-\cref{Cross_section}. The dashed line
-is the cross section that reproduces the observed relic abundance in our
-model.}}
-\label{Sigmav_spike}
-\end{figure}
 
 It is important to underline that the no-spike NFW limit and the spiked ones
-are derived over different observation regions: the Inner Galaxy Survey
+are derived over different observation regions: the Inner Galaxy Survey~\cite{Abdalla_2022}
 ($0.5^\circ < \theta < 3^\circ$) for the former, and the central
 $0.1^\circ\times 0.1^\circ$ pixel for the latter.
 This choice reflects the different nature of each signal: the NFW halo produces a diffuse annihilation flux, therefore is best 
@@ -1140,8 +1158,8 @@ astrophysical background by the smallest region that still contains it.
 
 
 We immediately notice the dramatic impact of the GS spike: the limit reaches a minimum of
-$\simeq 1.2\times 10^{-30}~\mathrm{cm^3/s}$ at
-$m_{\mathrm{DM}} \sim 200$~TeV, more than four orders of magnitude below the
+$\simeq 1.2\times 10^{-31}~\mathrm{cm^3/s}$ at
+$m_{\mathrm{DM}} \sim 20$~TeV, more than five orders of magnitude below the
 minimum of the no-spike limit, $\simeq 5\times 10^{-26}~\mathrm{cm^3/s}$ at
 $m_{\mathrm{DM}} \simeq 1.6$~TeV.
 Such low values of cross section are made accessible by the saturation:
@@ -1152,27 +1170,57 @@ This is the same effect we already discussed when we questioned
 the validity of the rescaling.
 
 
-The GS limit crosses the thermal relic value at
-$m_{\mathrm{DM}} \simeq 3.5$~TeV and then stays below it over the whole mass range
-considered: this means that our model excludes 
-this benchmark for $m_{\mathrm{DM}} \gtrsim 3.5$~TeV.
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Sigmav_limits_spike.png}
+\caption{\emph{Our result for the 95\% C.L. upper limits on the annihilation
+cross section in the $W^{+}W^{-}$ channel, rescaled to our halo parameters,
+for the peaked NFW halo of \cref{eq:nfw}. 
+The blue (NFW + GS spike) and orange (NFW + LSH spike) curves
+are obtained from the limits of Ref.~\cite{balaji2023darkmatterspikessgr},
+derived from the H.E.S.S. observations of the Galactic
+Center~\cite{HESS_PeVatron_2016}, they correspond respectively to the
+Gondolo--Silk spike of \cref{eq:gs} and to the less-stellar-heating spike of
+\cref{eq:lh}, both defined in \cref{sec:benchmarks}. The grey NFW curve without
+spike is the one of \cref{Cross_section}, based on the H.E.S.S. Inner Galaxy
+Survey~\cite{Abdalla_2022}. The dashed line is the cross section that reproduces
+the observed relic abundance in our model.}}
+\label{Sigmav_spike}
+\end{figure}
 
+The GS limit lies below the thermal relic value over the whole mass range for
+which the limits are available: already at $m_{\mathrm{DM}} \simeq 0.32$~TeV it is
+a factor $\simeq 4$ below it, and the margin grows to five orders of magnitude
+around $20$~TeV. Our model therefore excludes this benchmark for every
+$m_{\mathrm{DM}}$ between $0.3$ and $100$~TeV.
 
-
-The LSH limit is instead much weaker: its minimum always lies above the thermal relic
-cross section, which is therefore allowed at all masses. 
+The LSH limit is instead much weaker, but it still dips below the thermal relic
+cross section in a window of high masses: it crosses it at
+$m_{\mathrm{DM}} \simeq 15$~TeV, reaches a minimum of
+$\simeq 6.7\times 10^{-27}~\mathrm{cm^3/s}$ at $m_{\mathrm{DM}} \simeq 48$~TeV,
+a factor $\simeq 3$ below the relic value, and rises back above it at
+$m_{\mathrm{DM}} \simeq 69$~TeV. Thermal relic DM is therefore excluded in the
+range $15 \lesssim m_{\mathrm{DM}}/\mathrm{TeV} \lesssim 69$ even for this milder
+spike, and allowed outside it.
 
 
 These results confirm the interpretation given at the end of the previous
 chapter: an excluded point expresses the simultaneous incompatibility of the assumed
 DM distribution, mass and cross section. Since the thermal relic cross section
 is a robust theoretical prediction, we analyze its compatibility 
-with the DM profile. We obtain that if thermal DM with
-$m_{\mathrm{DM}} \gtrsim 3.5$~TeV exists, then the combination of an NFW halo
-and a GS spike is excluded, meaning that either the inner halo is
-shallower than NFW, or the spike has been softened by stellar heating, or it
-never formed. 
+with the DM profile. 
+
+We obtain that if thermal DM with $0.3 \lesssim m_{\mathrm{DM}}/\mathrm{TeV}
+\lesssim 100$ exists, then the combination of an NFW halo and a GS spike is
+excluded, meaning that either the inner halo is shallower than NFW, or the spike
+has been softened by stellar heating, or it never formed. Softening the spike is
+however not sufficient over the whole mass range: in the window
+$15 \lesssim m_{\mathrm{DM}}/\mathrm{TeV} \lesssim 69$ even the LSH benchmark on
+an NFW halo is excluded, so there the inner halo itself must be shallower than
+NFW, or the spike must be absent altogether.
+
+
+
 Observations of the Galactic Center thus probe not only particle
 DM properties but also the dynamical history of the innermost region of the
 Milky Way.
-
